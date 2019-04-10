@@ -6,7 +6,7 @@
 
 **산술 연산자 오버로딩
 
-*이항 상술 연산 오버로딩*
+**이항 상술 연산 오버로딩**
 
 ```kotlin
 data class Point(val x: Int, val y: Int) {
@@ -25,7 +25,7 @@ fun main() {
 
 plus 함수 앞에 operator 키워드를 붙여야 한다. operator 키워드를 붙임으로써 어떤 함수가 관례를 따르는 함수임을 명확히 할 수 있다.
 
-*연산자를 확장 함수로 정의하기*
+**연산자를 확장 함수로 정의하기**
 
 ```kotlin
 data class Point(val x: Int, val y: Int) {
@@ -39,7 +39,7 @@ operator fun Point.plus(other: Point) : Point {
 
 외부 함수의 클래스에 대한 연산자를 정의할 때는 관례를 따르는 이름의 확장 함수로 구현하는 게 일반적인 패턴이다.
 
-*오버로딩 가능한 이항 상술 연산자*
+**오버로딩 가능한 이항 상술 연산자**
 
 식 | 함수 이름 | 기타
 ---|:---:|---:
@@ -49,7 +49,7 @@ operator fun Point.plus(other: Point) : Point {
 `a + b` | plus |
 `a - b` | minus |
 
-*복합 대입 연산자 오버로딩*
+**복합 대입 연산자 오버로딩**
 
 ```kotlin
  var point = Point(1,2)
