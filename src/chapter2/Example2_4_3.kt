@@ -17,7 +17,7 @@ fun main() {
     }
 
     for ((letter, binary) in binaryReps) {
-        //println("$letter = $binary")
+        println("$letter = $binary")
     }
 
     //맵에 사용했던 구조 분해 구문을 맵이 아닌 컬렉션에도 활용할 수 있다.

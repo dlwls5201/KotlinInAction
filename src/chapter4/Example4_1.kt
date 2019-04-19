@@ -1,7 +1,13 @@
 package chapter4
 
+import java.lang.IllegalArgumentException
+
 /**
- * 4.1.1
+ * 클래스 계층 정의
+ *
+ * 4.1.1 코틀린 인터페이스
+ *
+ * 코틀린 인터페이스는 자바 8 인터페이스와 비슷하다
  */
 //코틀린 인터페이스 안에는 추상 메소드뿐 아니라 구현이 있는 메소드도 정의할 수 있다.
 interface Clickable {
@@ -11,12 +17,23 @@ interface Clickable {
     fun showOff() = println("I'm clickable!")
 }
 
+//동일한 메소드를 구현하는 다른 인터페이스 정의
+interface Focusable {
+    fun setFocus(b: Boolean) =
+        println("I ${if (b) "got" else "lost"} focus")
+
+    //Clickable과 같은 showOff 메소드를 가지고 있다.
+    //같이 구현할 경우 컴파일 에러가 발생한다.
+    fun showOff() = println ("I'm focusable!")
+}
+
 class Button: Clickable {
     override fun click() = println("I was clicked")
 }
 
 class Button2: Clickable, Focusable {
     override fun showOff() {
+        //상위 타입의 구현을 호출할 때는 자바와 마찬가지로 super 을 사용한다.
         super<Clickable>.showOff()
         super<Focusable>.showOff()
     }
@@ -24,20 +41,11 @@ class Button2: Clickable, Focusable {
     override fun click() = println("I was clicked 2")
 
 }
-//동일한 메소드를 구현하는 다른 인터페이스 정의
-interface Focusable {
-    fun setFocus(b: Boolean) =
-            println("I ${if (b) "got" else "lost"} focus")
 
-    //Clickable 과 같은 showOff 메소드를 가지고 있다.
-    //같이 구현할 경우 컴파일 에러가 발생한다.
-    //-> 상위 타입의 구현을 호출할 때는 자바와 마찬가지로 super 을 사용한다.
-    fun showOff() = println ("I'm focusable!")
-}
 
 fun main() {
-    //Button().click()
-    //Button().showOff()
+    Button().click()
+    Button().showOff()
 
     Button2().click()
     Button2().setFocus(false)
@@ -47,8 +55,9 @@ fun main() {
 /**
  *
  * 4.1.2 open, final, abstract 변경자: 기본적으로 final
- * 취약한 기반 클래스라는 문제는 하위 클래스가 기반 클래스에 대해 가졌던 기반 클래스를 변경함으로써 꺠져버린 경우에 생긴다.
+ * 취약한 기반 클래스라는 문제는 하위 클래스가 기반 클래스에 대해 가졌던 가정이 기반 클래스를 변경함으로써 꺠져버린 경우에 생긴다.
  * 어떤 클래스가 자신을 상속하는 방법에 대해 정확한 규칙을 제공하지 않는다면 그 클래스의 클라이언트는 기반 클래스를 작성한 사람의 의도와 다른 방식으로 메소드를 오버라이드할 위험이 있다.
+ * 모든 하위 클래스르 분석하는 것은 불가증하므로 기반 클래스는 취약하다
  *
  * 자바의 클래스와 메소드는 기본적으로 상속에 대해 열려있지만 코틀린의 클래스와 메소드는 기본적으로 final 이다.
  *
@@ -88,17 +97,32 @@ class Outer {
  * 상위 클래스에 sealed 변경자를 붙이면 그 상위 클래스를 상속한 하위 클래스 정의를 제한할 수 있다.
  * sealed 클래스의 하위 클래스를 정의할 때는 반드시 상위 클래스 안에 중첩시켜야 한다.
  */
-sealed class Expr {
-    class Num(val value:Int) : Expr()
+interface Expr1
 
-    class Sum(val left: Expr, val right: Expr) : Expr()
+class Num(val value: Int) : Expr1
+
+class Sum(val left: Expr1, val right: Expr1) : Expr1
+
+fun eval1(e: Expr1) : Int =
+    when(e) {
+        //else 분기가 꼭 있어야 한다.
+        is Num -> e.value
+        is Sum -> eval1(e.right) + eval1(e.left)
+        else ->
+            throw IllegalArgumentException("Unknown expression")
+    }
+
+sealed class Expr2 {
+    class Num(val value:Int) : Expr2()
+
+    class Sum(val left: Expr2, val right: Expr2) : Expr2()
 }
 
-fun eval(e: Expr) : Int =
+fun eval2(e: Expr2) : Int =
         when(e) {
             //when 식이 모든 하위 클래스를 검사하므로 별도의 else 분기가 없어도 된다.
-            is Expr.Num -> e.value
-            is Expr.Sum -> eval(e.right) + eval(e.left)
+            is Expr2.Num -> e.value
+            is Expr2.Sum -> eval2(e.right) + eval2(e.left)
         }
 
 

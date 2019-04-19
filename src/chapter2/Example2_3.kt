@@ -5,7 +5,6 @@ import java.lang.IllegalArgumentException
 /**
  * 선택 표현과 처리: enum과 when
  */
-
 //프로퍼티와 메소드가 있는 enum 클래스 선언하기
 enum class Color(
     val r:Int, val g:Int, val b:Int //상수 프로퍼티를 정의한다.
@@ -95,6 +94,6 @@ fun main() {
 
     //println(mixOptimized(Color.BLUE, Color.YELLOW))
 
-    println(evalWithLogging(Sum(Sum(Num(1), Num(2)), Num(4))))
+    //println(evalWithLogging(Sum(Sum(Num(1), Num(2)), Num(4))))
 
 }
