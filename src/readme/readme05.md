@@ -11,12 +11,12 @@
 
 사람들로 이뤄진 리스트가 있고 그중에 가장 연장자를 찾아보자.
 
-사람 클래스
 ```kotlin
 data class Person(val name: String, val age: Int)
 ```
+사람 클래스
 
-컬렉션을 직접 검색하기
+
 ```kotlin
 fun findTheOldest(people: List<Person>) {
         var maxAge = 0 // 가장 많은 나이를 저장한다.
@@ -32,12 +32,16 @@ fun findTheOldest(people: List<Person>) {
     println(theOldest)
 }
 ```
+컬렉션을 직접 검색하기
 
-람다를 사용해 컬렉션 검색하기
+
 ```kotlin
 println(people.maxBy { it.age })
 ```
+람다를 사용해 컬렉션 검색하기
+
 모든 컬렉션 대해 maxBy 함수를 호출할 수 있다. maxBy는 가장 큰 원소를 찾기 위해 비교에 사용할 값을 돌려주는 함수를 인자로 받는다.
+
 
 ```kotlin
 println(people.maxBy(Person::age))
@@ -53,7 +57,7 @@ println(people.maxBy(Person::age))
     println(sum(1,2))
 
     //sum 과 같은 기능
-    people.maxBy({ p: Person -> p.age })
+    people.maxBy ({ p: Person -> p.age })
 
     //파라미터 타입 생략
     people.maxBy({ p -> p.age })
@@ -115,6 +119,7 @@ val getAge = Person::age
 
 ::를 사용하는 식을 멤버 참조라고 부른다. 멤버 참조는 프로퍼티나 메소드를 단 하나만 호출하는 함수 값을 만들어준다. ::는 클래스 이름과 여러분이 참조하려는 멤버(프로퍼티나 메소드) 이름 사이에 위치한다.
 
+**Person::age***
 **클래스::맴버**
 
 맴버 참조는 그 멤버를 호출하는 람다와 같은 타입이다. 따라서 다음 예처럼 그 둘을 자유롭게 바꿔 쓸 수 있다.
