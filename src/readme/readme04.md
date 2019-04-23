@@ -289,7 +289,7 @@ data class Client(val name: String, val postalCode: Int)
 - HashMap과 같은 해시 기반 컨테이너에서 키로 사용할 수 있는 hashCode
 - 클래스의 각 필드를 선언 순서대로 표시하는 문자열 표현을 만들어 주는 toString
 
-equals와 hashCode는 주 생성자에 나열된 모든 프로퍼티를 고려해 만들어진다.
+**equals와 hashCode는 주 생성자에 나열된 모든 프로퍼티를 고려해 만들어진다.**
 
 
 **데이터 클래스와 불변성: copy() 메소드**
