@@ -39,7 +39,7 @@ fun <T> joinToString(
 **디폴트 파라미터 값을 사용해 joinToString() 정의하기**
 
 ```kotlin
-fun <T> joinToString2(
+fun <T> joinToString(
     collection: Collection<T>,
     separator: String = "",
     prefix: String = "",
@@ -63,7 +63,7 @@ fun <T> joinToString2(
 
 ## 메소드를 다른 클래스에 추가: 확장 함수와 확장 프로퍼티
 
-기존 자바 API를 재작성하지 않고도 코틀린이 제공하는 여러 펴니한 기능을 할 수 있는 개녑이 확장 함수이다.
+기존 자바 API를 재작성하지 않고도 코틀린이 제공하는 여러 편리한 기능을 할 수 있는 개녑이 확장 함수이다.
 **확장 함수는 어떤 클래스의 멤버 메소드인 것처럼 호출할 수 있지만 그 클래스의 밖에 선언된 함수다.**
 
 어떤 문자열의 마지막 문자를 돌려주는 메소드
@@ -71,9 +71,9 @@ fun <T> joinToString2(
 fun String.lastChar(): Char = this.get(this.length - 1)
 ```
 
-joinToString()를 확장으로 정의하기
+**joinToString()를 확장으로 정의하기**
 ```kotlin
-fun <T> Collection<T>.joinToString3(
+fun <T> Collection<T>.joinToString(
     separator: String = "",
     prefix: String = "",
     postfix: String = ""
@@ -86,19 +86,9 @@ fun <T> Collection<T>.joinToString3(
     result.append(postfix)
     return result.toString()
 }
+```
 
-//main
-    //확장함수는 오버라이드 할 수 없다.
-    val view: View = Button()
-    view.click()
-    view.showOff()
-
-    val viewButton = Button()
-    viewButton.click()
-    viewButton.showOff()
-```kotlin
-
-확장함수는 오버라이드 할 수 없다.
+**확장함수는 오버라이드 할 수 없다.**
 ```kotlin
 open class View {
     open fun click() = println("View clicked")
@@ -111,6 +101,16 @@ class Button: View() {
 fun View.showOff() = println("I'm a view!")
 
 fun Button.showOff() = println("I'm a button!")
+
+  //함수 호출
+    val view: View = Button()
+    view.click()
+    view.showOff()
+
+    val viewButton = Button()
+    viewButton.click()
+    viewButton.showOff()
+
 ```
 
 

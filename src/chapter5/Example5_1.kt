@@ -18,7 +18,7 @@ fun main() {
     //코틀린 람다 식은 항상 중괄호로 둘러싸여 있다.
     //화살표가 인자 목록과 람다 본문을 구분해준다.
     val sum = { x:Int, y: Int -> x + y}
-    //println(sum(1,2))
+    println(sum(1,2))
 
     //sum 과 같은 기능
     people.maxBy({ p: Person -> p.age })
@@ -26,7 +26,7 @@ fun main() {
     //파라미터 타입 생략
     people.maxBy({ p -> p.age })
 
-    //람다가 유일한 인자이므로 마지막 인자이디고 하다. 따라서 괄호 뒤에 람다를 둘 수 있다.
+    //람다가 유일한 인자이므로 마지막 인자이이기도 하다. 따라서 괄호 뒤에 람다를 둘 수 있다.
     people.maxBy() { p -> p.age }
 
     //람다가 어떤 함수의 유일한 인자이고 괄호 뒤에 람다를 썼다면 호출 시 빈 괄호를 없애도 된다.
@@ -45,7 +45,7 @@ fun main() {
 
     //함수 파라미터를 람다 안에서 사용하기
     val errors = listOf("403 Forbidden", "404 Not Found")
-    //printMessageWithPrefix(errors, "Error:")
+    printMessageWithPrefix(errors, "Error:")
 
     //람다 안에서 바깥 함수의 로컬 변수 변경하기
     val responses = listOf("200 OK", "418 I;m a teapot", "500 Internal Server Error")
@@ -54,8 +54,8 @@ fun main() {
 
 //람다를 사용해 컬렉션 검색하기
 fun findTheOldest(people: List<Person>) {
-    var maxAge = 0
-    var theOldest: Person? = null
+        var maxAge = 0 // 가장 많은 나이를 저장한다.
+    var theOldest: Person? = null // 가장 연장자인 사람을 저장한다.
 
     for(person in people) {
         if(person.age > maxAge) {

@@ -7,8 +7,6 @@ import java.lang.StringBuilder
  *
  *  함수형 프로그래밍 스타일을 사용하면 컬렉션을 다룰 때 편리하다.
  */
-
-
 fun main() {
 
     /**

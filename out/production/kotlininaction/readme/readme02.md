@@ -19,8 +19,6 @@ fun max(a: Int, b: Int) = if (a > b) a else b
 **커스텀 접근자**
 get()
 
-
-
 ```kotlin
 class Rectangle(val height:Int, val width:Int) {
     val isSquare: Boolean get() {
