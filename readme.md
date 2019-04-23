@@ -1,5 +1,7 @@
 # Kotlin In Action
 
+Kotlin In Action 책을 보며 공부한 내용을 정리한 저장소 입니다.
+
 <img src="http://image.yes24.com/momo/TopCate1664/MidCate003/166322296.jpg" width="60%">
 
 - [Chapter01 코틀린이란 무엇이며, 왜 필요한가?](/src/readme/readme01.md)
