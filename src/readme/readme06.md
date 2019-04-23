@@ -29,7 +29,7 @@ class Person(val firstName: String, val lastName: String) {
 
 **널 아님 단언: !!**
 
-느낌표를 이중(!!)으로 사요요하면 어떤 값이든 널이 될 수 없는 타임으로 바꿀 수 있다.
+느낌표를 이중(!!)으로 사용하면 어떤 값이든 널이 될 수 없는 타임으로 바꿀 수 있다.
 
 ```kotlin
 fun ignoreNulls(s: String?) {
@@ -39,7 +39,7 @@ fun ignoreNulls(s: String?) {
 
 **나중에 초기화할 프로퍼티**
 
-lateinit 프로퍼티를 의존관계 주임(DI) 프레임워크와 함께 사용하는 경우가 많다.
+lateinit 프로퍼티를 의존관계 주입(DI) 프레임워크와 함께 사용하는 경우가 많다.
 
 **널이 될 수 있는 타입 확장**
 
