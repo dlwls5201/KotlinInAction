@@ -2,6 +2,8 @@
 
 ![Kotlin In Action](http://image.yes24.com/momo/TopCate1664/MidCate003/166322296.jpg)
 
+<img src="http://image.yes24.com/momo/TopCate1664/MidCate003/166322296.jpg" width="60%">
+
 - [Chapter01 코틀린이란 무엇이며, 왜 필요한가?](/src/readme/readme01.md)
 - [Chapter02 코틀린 기초](/src/readme/readme02.md)
 - [Chapter03 함수 정의와 호출](/src/readme/readme03.md)
