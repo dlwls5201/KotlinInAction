@@ -1,7 +1,5 @@
 # Kotlin In Action
 
-![Kotlin In Action](http://image.yes24.com/momo/TopCate1664/MidCate003/166322296.jpg)
-
 <img src="http://image.yes24.com/momo/TopCate1664/MidCate003/166322296.jpg" width="60%">
 
 - [Chapter01 코틀린이란 무엇이며, 왜 필요한가?](/src/readme/readme01.md)
