@@ -7,7 +7,7 @@ Kotlin In Action 책을 보며 공부한 내용을 정리한 저장소 입니다
 - [Chapter01 코틀린이란 무엇이며, 왜 필요한가?](/src/readme/readme01.md)
 - [Chapter02 코틀린 기초](/src/readme/readme02.md)
 - [Chapter03 함수 정의와 호출](/src/readme/readme03.md)
-- [Chapter04 클래스, 객체, 인터페이](/src/readme/readme04.md)
+- [Chapter04 클래스, 객체, 인터페이스](/src/readme/readme04.md)
 - [Chapter05 람다로 프로그래밍](/src/readme/readme05.md)
 - [Chapter06 코틀린 타입 시스템](/src/readme/readme06.md)
 - [Chapter07 연산자 오버로딩과 기타 관례](/src/readme/readme07.md)
