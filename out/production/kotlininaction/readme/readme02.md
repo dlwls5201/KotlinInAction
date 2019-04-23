@@ -1,15 +1,15 @@
 # 코클린 기초
 
-**식이 본문인 함수**
+## 식이 본문인 함수
 
-볼록이 본문인 함수
+**볼록이 본문인 함수**
 ```kotlin
 fun max(a: Int, b: Int): Int {
     return if (a > b) a else b
 }
 ```
 
-식이 본문인 함수
+**식이 본문인 함수**
 ```kotlin
 fun max(a: Int, b: Int) = if (a > b) a else b
 ```
@@ -17,6 +17,10 @@ fun max(a: Int, b: Int) = if (a > b) a else b
 사용자가 반환 타입을 적지 않아도 컴파일러가 함수 본문 식을 분석해서 식의 결과 타입을 함수 반환 타입으로 정해준다. 이러한 기능을 **타입 추론**이라 부른다.
 
 **커스텀 접근자**
+get()
+
+
+
 ```kotlin
 class Rectangle(val height:Int, val width:Int) {
     val isSquare: Boolean get() {
@@ -36,7 +40,7 @@ enum class Color {
 }
 ```
 
-**프로퍼티와 메소드가 있는 enum 클래스 선언하기***
+**프로퍼티와 메소드가 있는 enum 클래스 선언하기**
 
 ```kotlin
 enum class Color(
