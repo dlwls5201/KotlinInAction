@@ -164,7 +164,7 @@ open class View {
     }
 }
 ```
-이 클래스는 주 생성자를 선언하지 않고 브 생성자만 2가지 선언한다. 부 생성자는 constructor 키워드로 시작한다. 필요에 따라 얼마든지 부 생성자를 많이 선언해도 된다.
+이 클래스는 주 생성자를 선언하지 않고 부 생성자만 2가지 선언한다. 부 생성자는 constructor 키워드로 시작한다. 필요에 따라 얼마든지 부 생성자를 많이 선언해도 된다.
 
 
 
@@ -181,7 +181,7 @@ class MyButton : View {
     }
 }
 ```
-여기서 두 부 생성자는 super() 키워드를 통해 자신에 대응하는 상위 클래스 생성자를 호출한다. 즉 생성자가 상위 클래스 생성자에게 색체 생성을 위힘한다는 사실을 표시한다.
+여기서 두 부 생성자는 super() 키워드를 통해 자신에 대응하는 상위 클래스 생성자를 호출한다. 즉 생성자가 상위 클래스 생성자에게 객체 생성을 위힘한다는 사실을 표시한다.
 자바와 마찬가지로 생성자에서 this()를 통해 클래스 자신의 다른 생성자를 호출할 수 있다.
 
 ```kotlin
@@ -212,21 +212,58 @@ class MyButton : View {
 - 인터페이스는 아무 상태도 포함할 수 없으므로 상태를 저장할 필요가 있다면 인터페이스를 구현한 하위 클래스에서 상태 저장을 위한 프로퍼티 등을 만들어야 한다.
 
 ```kotlin
-interface User3 {
+interface User {
     val nickname: String
 }
 
-class PrivateUser(override val nickname: String) : User3
+class PrivateUser(override val nickname: String) : User
 
-class SubscribeUser(val email: String): User3 {
+class SubscribeUser(val email: String): User {
     override val nickname: String
         get() = email.substringBefore('@') //커스텀 게터
 }
 
-class FacebookUser(val accountId: Int) : User3 {
+class FacebookUser(val accountId: Int) : User {
     override val nickname = getFacebookName(accountId)
 }
 ```
+**커스텀 게터와 세터**
+
+자바에서는 변수를 초기화 해줄 때 미리 검증단계를 아래와 같이 구현합니다.
+
+```java
+class Test {
+  private String name;
+
+  public void setName(String name) {
+    if (TextUtils.ieEmpty(name) == false) {
+      this.name = name;
+    } else {
+      this.name = "";
+    }
+  }
+
+  public String getName() {
+    return TextUtils.isEmpty(name) == false ? name : "";
+  }
+}
+```
+
+코틀린에서는 커스텀 게터와 세터를 사용해 별도의 메소드를 생성하지 않고 값의 검증과 초기화를 진행할 수 있다.
+
+```kotlin
+class Test {
+var name: String = ""
+  get() = if (field.length > 0) field else "name"
+  set (value) {
+      if (value.length > 0) field = value else ""
+  }
+}
+```
+
+**Backing Fields**
+
+위에 코틀린 코드에서 사용한 field를 Backing Fields라고 합니다. Backing Fields를 사용해 검증후 값을 초기화 하거나 리턴할 수 있습니다.
 
 
 
@@ -257,7 +294,7 @@ class Client(val name: String, val postalCode: Int) {
 - 문자열 표현 : toString
 
 - 객체의 동등성 : equals()
-서로 다른 두 객체가 내부에 동일한 데이터를 포항히는 경우 그 둘을 동등한 객체로 간주해야 할 수 있다.
+서로 다른 두 객체가 내부에 동일한 데이터를 포함히는 경우 그 둘을 동등한 객체로 간주해야 할 수 있다.
 
 **동등성 연산자 ==를 사용함**
 
@@ -268,7 +305,7 @@ class Client(val name: String, val postalCode: Int) {
 참조 비교를 위해서는 === 연산자를 사용할 수 있다. === 연산자는 자바에서 객체의 참조를 비교할 때 사용하는 == 연산자와 같다.
 
 - 해시 컨테이너: hashCode()
-자바에서는 equals 를 오버라이드할 때 반드시 hashCode 도 함게 오버라이드해야 한다.
+자바에서는 equals 를 오버라이드할 때 반드시 hashCode 도 함께 오버라이드해야 한다.
 
 JVM 언어에서는 hashCode가 지켜야 하는 "equals()가 true를 반환하는 두 객체는 반드시 같은 hashCode()를 반환해야 한다"라는 제약이 있다.
 
@@ -307,11 +344,55 @@ println(lee.copy(postalCode = 4000))
 
 **4.3.3 클래스 위임: by 키워드 사용**
 
-- 대규모 객체지향 시스템을 설계할 때 시스템을 취약하게 만드는 문제는 보통 구현 상속에 의해 발생한다. 하위 클래스가 상위 클래스의 메소드 중 일부를 오버라이드하면 하위 클래스는 사우이 클래스의 세부 구현 사항에 의존하게 된다.
-- 시스템이 변함에 따라 상위 클래스의 구현이 바뀌거나 사우이 클래스에 새로운 메소드가 추가된다. 그 과정에서 하위 클래스가 상위 클래스에 대해 갖고 있던 가정이 깨져서 코드가 정상적으로 작동하지 못하는 경우가 생길 수 있다.
-- 우리는 종종 상속을 허용하지 않는 클래스에 새로운 동ㅇ작을 추가해야 할 때가 있다. 이럴 때 사용하는 일반적인 방법이 데코레이터패턴이다. 이 패턴의 핵심음 사송을 허용하지 않는 클래스 대신 사용할 수 있는 새로운 클래스를 만들되
+- 대규모 객체지향 시스템을 설계할 때 시스템을 취약하게 만드는 문제는 보통 구현 상속에 의해 발생한다. 하위 클래스가 상위 클래스의 메소드 중 일부를 오버라이드하면 하위 클래스는 상위 클래스의 세부 구현 사항에 의존하게 된다.
+- 시스템이 변함에 따라 상위 클래스의 구현이 바뀌거나 상위 클래스에 새로운 메소드가 추가된다. 그 과정에서 하위 클래스가 상위 클래스에 대해 갖고 있던 가정이 깨져서 코드가 정상적으로 작동하지 못하는 경우가 생길 수 있다.
+- 우리는 종종 상속을 허용하지 않는 클래스에 새로운 동작을 추가해야 할 때가 있다. 이럴 때 사용하는 일반적인 방법이 데코레이터패턴이다. 이 패턴의 핵심은 상속을 허용하지 않는 클래스 대신 사용할 수 있는 새로운 클래스를 만들되
 기존 클래스와 같은 인터페이스를 데코레이터가 제공하게 만들고, 기존 클래스를 데코레이터 내부에 필드로 유지하는 것이다. 이때 새로 정의해야 하는 기능은 데코레이터의 메소드에 새로 정의하고 기존 기능이 그대로 필요한 부분은 데코레이터의 메소드가 기존 클래스의 메소드에게 요청을 전달한다.
-- 하지만 이런 접근 방법의 단점은 준비 코드가 상당히 많이 필요하다는 점이다. 예륵 들어 Collection 같이 비교적 단순한 인터페이스를 구현하면서 아무 동작도 변경하지 않는 데코레이터를 만들 때조차도 복잡한 코드를 작성해야 한다.
+- 하지만 이런 접근 방법의 단점은 준비 코드가 상당히 많이 필요하다는 점이다. 예를 들어 Collection 같이 비교적 단순한 인터페이스를 구현하면서 아무 동작도 변경하지 않는 데코레이터를 만들 때조차도 복잡한 코드를 작성해야 한다.
+
+```kotlin
+class DelegationCollection<T> : Collection<T> {
+    private val innerList = arrayListOf<T>()
+
+    override val size: Int get() = innerList.size
+    override fun isEmpty(): Boolean = innerList.isEmpty()
+    override fun contains(element: T): Boolean = innerList.contains(element)
+    override fun iterator(): Iterator<T> = innerList.iterator()
+    override fun containsAll(elements: Collection<T>) : Boolean =
+        innerList.containsAll(elements)
+}
+```
+이런 위임을 언어가 제공하는 일급 시민 기능으로 지원한다는 점이 코틀린의 장점이다. 인터페이스를 구현할 때 by 키워드를 통해 그 인터페이스에 대한 구현을 가른 객체에 위임 중이라는 사실을 명시할 수 있다. 다음은 앞의 예제를 위임을 사용해 재작성한 코드다.
+
+```kotlin
+class DelegationCollection<T>(
+    innerList: Collection<T> = ArrayList<T>()
+    ) : Collection<T> by innerList { }
+```
+클래스 안에 있던 모든 메소드 정의가 없어졌다. 컴파일러가 그런 전달 메소드를 자동으로 생성하며 자동 생성한 코드의 구현은 DelegationCollection에 있던 구현과 비슷하다.
+
+메소드 중 일부의 동작을 변경하고 싶은 경우 메소드를 오버라이드하면 컴파일러가 생성한 메소드 대신 오버라이드한 메소드가 쓰인다. 기존 클래스의 메소드에 위임하는 기본 구현으로 충분한 메소드는 따로 오버라이드할 필요가 없다.
+원소를 추가하려고 시고한 윗수를 기록하는 컬렉션을 구현해보자.
+
+```kotlin
+class CountingSet<T> (
+    val innerSet: MutableCollection<T> = HashSet<T>()
+) : MutableCollection<T> by innerSet { //MutableCollection의 구현을 innerSet에게 위임한다.
+
+    var objectsAdded = 0
+
+    // add, addAll 이 두 메소드는 위임하지 않고 새로운 구현을 제공한다.
+    override fun add(element: T): Boolean {
+        objectsAdded++
+        return innerSet.add(element)
+    }
+
+    override fun addAll(elements: Collection<T>): Boolean {
+        objectsAdded += elements.size
+        return innerSet.addAll(elements)
+    }
+}
+```
 
 
 ### 4.4 object 키워드: 클래스 선언과 인스턴스 생성

@@ -66,6 +66,7 @@ fun main() {
      *  참조 비교를 위해서는 === 연산자를 사용할 수 있다.
      */
     println(client1 == client2)
+    println(client1 === client2)
 
     /**
      * 해시 컨테이너
@@ -89,3 +90,20 @@ fun main() {
  *
  * 인터페이스를 구현할 때 by 키워드를 통해 그 인터페이스데 대한 구현을 다른 객체에 위임 중이라는 사실을 명시할 수 있다.
  */
+class CountingSet<T> (
+    val innerSet: MutableCollection<T> = HashSet<T>()
+) : MutableCollection<T> by innerSet { //MutableCollection의 구현을 innerSet에게 위임한다.
+
+    var objectsAdded = 0
+
+    // add, addAll 이 두 메소드는 위임하지 않고 새로운 구현을 제공한다.
+    override fun add(element: T): Boolean {
+        objectsAdded++
+        return innerSet.add(element)
+    }
+
+    override fun addAll(elements: Collection<T>): Boolean {
+        objectsAdded += elements.size
+        return innerSet.addAll(elements)
+    }
+}
