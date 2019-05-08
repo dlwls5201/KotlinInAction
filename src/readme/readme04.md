@@ -164,7 +164,7 @@ open class View {
     }
 }
 ```
-이 클래스는 주 생성자를 선언하지 않고 브 생성자만 2가지 선언한다. 부 생성자는 constructor 키워드로 시작한다. 필요에 따라 얼마든지 부 생성자를 많이 선언해도 된다.
+이 클래스는 주 생성자를 선언하지 않고 부 생성자만 2가지 선언한다. 부 생성자는 constructor 키워드로 시작한다. 필요에 따라 얼마든지 부 생성자를 많이 선언해도 된다.
 
 
 
@@ -181,7 +181,7 @@ class MyButton : View {
     }
 }
 ```
-여기서 두 부 생성자는 super() 키워드를 통해 자신에 대응하는 상위 클래스 생성자를 호출한다. 즉 생성자가 상위 클래스 생성자에게 색체 생성을 위힘한다는 사실을 표시한다.
+여기서 두 부 생성자는 super() 키워드를 통해 자신에 대응하는 상위 클래스 생성자를 호출한다. 즉 생성자가 상위 클래스 생성자에게 객체 생성을 위힘한다는 사실을 표시한다.
 자바와 마찬가지로 생성자에서 this()를 통해 클래스 자신의 다른 생성자를 호출할 수 있다.
 
 ```kotlin
@@ -212,21 +212,58 @@ class MyButton : View {
 - 인터페이스는 아무 상태도 포함할 수 없으므로 상태를 저장할 필요가 있다면 인터페이스를 구현한 하위 클래스에서 상태 저장을 위한 프로퍼티 등을 만들어야 한다.
 
 ```kotlin
-interface User3 {
+interface User {
     val nickname: String
 }
 
-class PrivateUser(override val nickname: String) : User3
+class PrivateUser(override val nickname: String) : User
 
-class SubscribeUser(val email: String): User3 {
+class SubscribeUser(val email: String): User {
     override val nickname: String
         get() = email.substringBefore('@') //커스텀 게터
 }
 
-class FacebookUser(val accountId: Int) : User3 {
+class FacebookUser(val accountId: Int) : User {
     override val nickname = getFacebookName(accountId)
 }
 ```
+**커스텀 게터와 세터**
+
+자바에서는 변수를 초기화 해줄 때 미리 검증단계를 아래와 같이 구현합니다.
+
+```java
+class Test {
+  private String name;
+
+  public void setName(String name) {
+    if (TextUtils.ieEmpty(name) == false) {
+      this.name = name;
+    } else {
+      this.name = "";
+    }
+  }
+
+  public String getName() {
+    return TextUtils.isEmpty(name) == false ? name : "";
+  }
+}
+```
+
+코틀린에서는 커스텀 게터와 세터를 사용해 별도의 메소드를 생성하지 않고 값의 검증과 초기화를 진행할 수 있다.
+
+```kotlin
+class Test {
+var name: String = ""
+  get() = if (field.length > 0) field else "name"
+  set (value) {
+      if (value.length > 0) field = value else ""
+  }
+}
+```
+
+**Backing Fields**
+
+위에 코틀린 코드에서 사용한 field를 Backing Fields라고 합니다. Backing Fields를 사용해 검증후 값을 초기화 하거나 리턴할 수 있습니다.
 
 
 
