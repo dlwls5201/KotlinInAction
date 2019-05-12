@@ -9,23 +9,36 @@ interface Base {
 }
 
 class BaseImpl(val x: Int) : Base {
-    override fun printX() { print(x) }
+    override fun printX() { println(x) }
 
     private var y : Int = 100
 
-    fun printY() { print(y) }
+    fun printY() { println(y) }
 }
 val baseImpl = BaseImpl(10)
 
 //Derived 를 생성하고 Base 에서 정의하는 baseImpl 의 모든 메소드를 Derived 에 위임하겠다.
-class Derived(baseImpl: Base) : Base by baseImpl
+class Derived(baseImpl: Base) : Base by baseImpl {
+
+    private var z : Int = 1000
+
+    fun printZ() { println(z)}
+}
+
+fun main() {
+
+    Derived(baseImpl).printX()
+
+    baseImpl.printY()
+
+    Derived(baseImpl).printZ()
+
+}
 
 
 
 
-
-
-interface Vehicle {
+/*interface Vehicle {
     fun go(): String
 }
 class CarImpl(val where: String): Vehicle {
@@ -53,4 +66,4 @@ fun main() {
     myAirbus330.tellMeYourTrip()
     myBoeing337.tellMeYourTrip()
 
-}
+}*/
