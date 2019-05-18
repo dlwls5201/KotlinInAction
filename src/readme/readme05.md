@@ -34,8 +34,8 @@ fun findTheOldest(people: List<Person>) {
 
 **람다식문법**
 
-파라미터 -> 본문
-{ x: Int, y: Int -> x + y }
+파라미터 -> 본문<br>
+{ x: Int, y: Int -> x + y }<br>
 항상 중괄호 사이에 위치한다.
 
 ```kotlin
