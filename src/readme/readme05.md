@@ -19,7 +19,7 @@ data class Person(val name: String, val age: Int)
 //컬렉션을 직접 검색하기
 fun findTheOldest(people: List<Person>) {
         var maxAge = 0 // 가장 많은 나이를 저장한다.
-    var theOldest: Person? = null // 가장 연장자인 사람을 저장한다.`
+    var theOldest: Person? = null // 가장 연장자인 사람을 저장한다.
 
     for(person in people) {
         if(person.age > maxAge) {
@@ -32,16 +32,23 @@ fun findTheOldest(people: List<Person>) {
 }
 ```
 
+**람다식문법**
+
+파라미터 -> 본문
+{ x: Int, y: Int -> x + y }
+항상 중괄호 사이에 위치한다.
 
 ```kotlin
 //람다를 사용해 컬렉션 검색하기
-println(people.maxBy { it.age })
+people.maxBy { p:Person -> p.age }
+
+people.maxBy { it.age }
 ```
 모든 컬렉션 대해 maxBy 함수를 호출할 수 있다. maxBy는 가장 큰 원소를 찾기 위해 비교에 사용할 값을 돌려주는 함수를 인자로 받는다.
 
 
 ```kotlin
-println(people.maxBy(Person::age))
+people.maxBy(Person::age)
 ```
 이런식으로 단지 함수나 프로퍼티를 반환하는 역활을 수행하는 람다는 멤버 참조로 대치할 수 있다.
 
