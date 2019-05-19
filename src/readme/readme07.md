@@ -59,7 +59,7 @@ operator fun Point.times(scale: Double) : Point {
 **복합 대입 연산자 오버로딩**
 
 ```kotlin
- var point = Point(1,2)
+    var point = Point(1,2)
     point += Point(3,4)
     println(point)
 ```
@@ -98,7 +98,7 @@ operator fun Point.unaryMinus(): Point {
 [Point(x=10, y=-20)]
 
 식 | 함수 이름
----|:---:|---:
+---|:---:|
 `+a` | unaryPlus |
 `-a` | unaryMinus |
 `!a` | not |
