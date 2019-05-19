@@ -39,7 +39,7 @@ val action: () -> Unit = { println(42) }
 **(파라미터타입) -> 반환타입**
 **(int, String) -> Unit**
 
-``kotlin
+```kotlin
 val canReturnNull: (Int, Int) -> Int? =  { _, _ -> null }
 
 var funOrNull: ((Int, Int) -> Int)? = null
@@ -125,10 +125,8 @@ class ContactListFilters {
         }
         return { startsWithPrefix(it) && it.phoneNumber != null } // 람다를 반환한다.
     }
-}
-```
 
-```kotlin
+    //main
     val contacts = listOf(Person("Dmitry", "Jemerov", "123-4567"),
         Person("Svetlana", "Isakova", null))
 
@@ -140,6 +138,7 @@ class ContactListFilters {
     }
 
     println(contacts.filter (contactListFilters.getPredicate()))
+}
 ```
 
 ### 람다를 활용한 중복 제거
@@ -203,11 +202,13 @@ val averageMobileDuration = log
 ```kotlin
 fun List<SiteVisit>.averageDurationFor(predicate: (SiteVisit) -> Boolean) =
         filter(predicate).map(SiteVisit::duration).average()
-```
 
-```kotlin
-
+//main
+println(log.averageDurationFor { it.os in setOf(OS.IOS, OS.ANDROID) })
 ```
+코드 중복을 줄일 때 함수 타입이 상당히 도움이 된다. 코드의 일부분을 복사해 붙여 넣고 싶은 경우가 깄다면 그 코드를 람다로 만들면 중복을 제거할 수 있을 것이다.
+변수, 프로퍼티, 파라미터 등을 사용해 데이터의 중복을 없앨 수 있는 것처럼 람다를 사용하면 코드의 중복을 없앨 수 있다.
+
 
 ## 인라인 함수: 람다의 부가 비용 없애기
 
@@ -216,9 +217,72 @@ fun List<SiteVisit>.averageDurationFor(predicate: (SiteVisit) -> Boolean) =
 
 inline 변경자를 어떤 함수에 붙이면 컴파일러는 그 함수를 호출하는 모든 문장을 함수 본문에 해당하는 바이트코드로 바꿔치기 해준다.
 
-**인라인이 작동하는 방식**
+### 인라인이 작동하는 방식
 
-함수를 호출하는 코드를 함수를 호출하는 바이트코드 대신에 함수 본문을 번역한 바이트 코드로 컴파일한다는 뜻이다.
+어떤 함수를 inline으로 선언하면 그 함수의 본문이 인라인된다. 다른 말로 하면 함수를 호출하는 코드를 함수를 호출하는 바이트코드 대신에 함수 본문을 번역한 바이트 코드로 컴파일한다는 뜻이다.
+
+### 인라인 함수의 한계
+
+인라이닝을 하는 방식으로 인해 람다를 사용하는 모든 함수를 인라니잉할 수는 없다.
+일반적으로 인라인 함수의 본문에서 람다 식을 바로 호출하거나 람다 식을 인자로 전달받아 바로 호출하는 경우에는 그 람다를 인라이닝할 수 있다.
+
+### 컬렉션 연산 인라이닝
+
+컬렉션에 대해 작용하는 코틀린 표준 라이브러리의 성능을 살펴보자. 코틀린 표준 라이브러리의 컬렉션 함수는 대부분 람다를 인자로 받는다. 표준 라이브러리 함수를 사용하지 않고
+직접 이런 연산을 구현한다면 더 효율적이지 않을까?
+
+```kotlin
+//람다를 사용해 컬렉션 거르기
+val people = listOf(Person("Alice",29), Person("Bob",31))
+people.filter { it.age < 30 }
+
+//컬렉션을 직접 거르기
+val result = mutableListOf<Person>()
+for(person in people) {
+    if(person.age < 30) result.add(person)
+}
+```
+
+코틀린의 filter 함수는 인라인 함수다. 따라서 filter 함수의 바이트코드는 그 함수에 전달된 람다 본문의 바이트코드와 함께 filter를 호출한 위치에 들어간다. 그 결과 앞 예제에서 filter를 써서
+생긴 바이트코드와 뒤 예제에서 생긴 바이트코드는 거의 같다. 여러분은 코틀린다운 연산을 컬렉션에 대해 안전하게 사용할 수 있고, 코틀린이 제공하는 한수 인라이닝을 믿고 성능에 신경 쓰지 않아도 된다.
+
+시퀀스는 람다를 인라인핮디 않는다. 따라서 지연 계산을 통해 성능을 향상시키려는 이유로 모든 컬렉션 연산에 asSequence를 붙여서는 안 된다. 시퀀스 연산에서는 람다가 인라이닝되지 않기 때문에
+크기가 작은 컬렉션은 오히려 일반 컬렉션 연산이 더 성능이 나을 수도 있다. 시퀀스를 통해 성능을 향상시킬 수 있는 경우는 컬렉션 크기가 큰 경우뿐이다.
+
+### 함수를 인라인을 선언해야 하는 경우
+
+inline 키워드를 사용해도 람다를 인자로 받는 함수만 성능이 좋아질 가능성이 높다. 다른 경우에는 주의 깊게 성능을 측정하고 조사해봐야 한다.
+
+일반 함수 호출의 경우 JVN은 이미 강력하게 인라이닝을 지원한다. JVM의 최적화를 활용한다면 바이트코드에서는 각 함수 구현이 정확히 한 번만 있으면 되고, 그 함수를 호출하는 부분에서 따로 함수 코드를
+중복할 필요가 없다. 반면 코틀린 인라인 함수는 바이트 코드에서 각 함수 호출 지점을 함수 본문으로 대치하기 때문에 코드 중복이 생긴다. 게다가 함수를 직접 호출하면 스택 트레이스가 더 깔끔해진다. 반면
+람다를 인자로 받는 함수를 인라이닝하면 이익이 더 많다.
+
+- 1. 인라이닝을 통해 없앨 수 있는 부가 비용이 상당하다.
+함수 호출 비용을 줄일 수 있을 뿐 아니라 람다를 표현하는 클래스와 람다 인스턴스에 해당하는 객체를 만들 필요도 없어진다.
+
+- 2. 현재의 JVM은 함수 호출과 람다를 인라이닝해 줄 정도로 똑똑하지는 못하다.
+
+- 3. 일반 람다에서는 사용할 수 없는 몇 가지 기능을 사용할 수 있다.
+
+### 자원 관리를 위해 인라인된 람다 사용
+
+## 고차 함수 안에서 흐름 제어
+
+### 람다 안의 return문: 람다를 둘러싼 함수로부터 반환
+
+```kotlin
+fun lockForAlic(people: List<Person>) {
+    people.forEach {
+        if(it.name == "Alice") {
+            println("Found")
+            return
+        }
+    }
+}
+```
+
+람다 안에서 return을 사용하면 ㄹ마다로부터만 반환되는 게 아니라 그 람다를 호출하는 함수가 실행을 끝내고 반환된다. 그렇게 자신을 둘러싸고 있는 블록보다 더 바깥에 있는
+다른 블록을 반환하게 만드는 return문을 넌로컬(non-local) return이라 부른다. 이렇게 return이 바깥쪽 함수를 반환시킬 수 있는 때는 람다를 인자로 받는 함수가 인라인 함수인 경우뿐이다.
 
 ## 요약
 
