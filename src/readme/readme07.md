@@ -232,7 +232,8 @@ operator fun ClosedRange<LocalDate>.iterator(): Iterator<LocalDate> =
 
 구조 분해를 사용하면 복합적인 값을 분해해서 여러 다른 변수를 한꺼번에 초기화할 수 있다.
 
-구조 분해 선언을 사용해 여러 값 반환하기
+###  구조 분해 선언을 사용해 여러 값 반환하기
+
 ```kotlin
     data class NameComponents(val name: String, val extension: String)
 
