@@ -121,32 +121,39 @@ val과 var의 구별과 마찬가지로 컬렉션의 읽기 전용 인터페이�
 
 배열
 
+함수의 인자로 받은 값으로 구성된 배열을 반환합니다.
 ```kotlin
-    //함수의 인자로 받은 값으로 구성된 배열을 반환합니다.
     fun <T> arrayOf(varag elements: T): Array<T>
 
     val list = arrayOf(1,2,3,4,5)
+```
 
-    //특정 타입을 갖는 빈 배열을 반환합니다.
+특정 타입을 갖는 빈 배열을 반환합니다.
+```kotlin
     fun <T> emptyArray(): Array<T>
 
-     val list = emptyArray<String>()
+    val list = emptyArray<String>()
+```
 
-    //배열 내 각 값들이 모두 널 값으로 초기화되어 있고, 인자로 받은 size 만큼의 크기를 갖는 배열을 반환합니다.
+배열 내 각 값들이 모두 널 값으로 초기화되어 있고, 인자로 받은 size 만큼의 크기를 갖는 배열을 반환합니다.
+```kotlin
     fun <T> arrayOfNulls(size: Int): Array<T?>
 
-     val list = arrayOfNulls<String>(3)
+    val list = arrayOfNulls<String>(3)
+```
 
-    //자바 원시 타입을 포함하는 배열
+자바 원시 타입을 포함하는 배열
+```kotlin
     fun intArrayOf(varag elements: Int): IntArray
 
     val list = intArrayOf(1,2,3,4,5)
+```
 
-    //Array 생성자는 배열의 크기와 람다를 인자로 받아서 람다를 호출해서 각 배열 원소를 초기화해준다.
+Array 생성자는 배열의 크기와 람다를 인자로 받아서 람다를 호출해서 각 배열 원소를 초기화해준다.
+```kotlin
     public inline constructor(size: Int, init: (Int) -> T)
 
     val list = Array(5) { i -> i * i}
-
 ```
 
 ## 요약
