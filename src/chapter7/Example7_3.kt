@@ -1,12 +1,11 @@
 package chapter7
 
+import java.time.LocalDate
+
 /**
  *  컬렉션과 범위에 대해 쓸 수 있는 관레
  */
 //in 관례
-//in은 객체가 컬렉션에 들어있는지 검사한다.
-//in 연산자와 대응하는 함수는 contains다
-//어떤 점이 사각형 영역에 들어가는지 판단할 때 in 연산자를 사용하게 구현해보자
 data class Rectangle(val upperLeft: Point, val lowerRight: Point)
 
 operator fun Rectangle.contains(p: Point): Boolean {
@@ -15,7 +14,19 @@ operator fun Rectangle.contains(p: Point): Boolean {
 }
 
 //rangeTo 관레
-//
+
+//for 루프를 위한 iterator 관례
+operator fun ClosedRange<LocalDate>.iterator(): Iterator<LocalDate> =
+        object : Iterator<LocalDate> {
+            var current = start
+            override fun hasNext() = current <= endInclusive
+
+            override fun next() = current.apply {
+                current = plusDays(1) //현재 날짜를 1일 뒤로 변경한다.
+            }
+        }
+
+
 fun main() {
 
     val rect = Rectangle(Point(10,20), Point(50,50))

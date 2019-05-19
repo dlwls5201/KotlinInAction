@@ -193,7 +193,40 @@ fun main() {
 ```
 ### rangeTo 관례
 
+>(start..end) -> start.rangeTo(end)<br>
+.. 연산자는 rangeTo 함수 호출로 컴파일 된다.
+
+- 이 연산자를 아무 클래스에나 정의할 수 있다. 하지만 어떤 클래스가 Comparable 인터페이스를 구현하면 rangeTo를 정의할 필요가 없다.
+- 코틀린 표준 라이브러리에는 모든 Comparable 객체에 대해 적용 가능한 rangeTo 함수가 들어있다.
+
+```kotlin
+    operator fun <T: Comparable<T>> T.rangeTo(that: T): ClosedRange<T>
+```
+
 ### for 루프를 위한 iterator 관례
+
+앞서 했듯이 코틀린의 for 루프는 범위 검사와 똑같이 in 연산자를 사용한다. 하지만 이 경우 in의 의미는 다르다.
+for(x in list) {...}와 같은 문장은 list.iterator()을 호출해서 이터레이터를 얻은 다음, 자바와 마찬가지로 그 이터레이터에 대해 hasNext와 next 호출은 반복하는 식으로 변환된다.
+하지만 코틀린에서는 이 또한 관례이므로 iterator 메소드를 확장 함수로 정의할 수 있다.
+
+```kotlin
+    operator fun CharSequence.iterator(): CharIterator
+    >>> for (c in "abv") {}
+```
+
+클래스 안에 직접 iterator 메소드를 구현할 수도 있다. 예를 들어 날짜에 대해 이터레이션하는 다음 코드를 살펴보자
+
+```kotlin
+operator fun ClosedRange<LocalDate>.iterator(): Iterator<LocalDate> =
+        object : Iterator<LocalDate> {
+            var current = start
+            override fun hasNext() = current <= endInclusive
+
+            override fun next() = current.apply {
+                current = plusDays(1) //현재 날짜를 1일 뒤로 변경한다.
+            }
+        }
+```
 
 ## 구조 분해 선언과 component 함수
 
@@ -217,7 +250,12 @@ fun main() {
 
 ```
 
-구조 분해 선언과 루프
+### 구조 분해 선언과 루프
+
+아래 간단한 예제는 두 가지 코틀린 관례를 활용한다. 하나는 객체를 이터레이션하는 관례고, 다른 하나는 구조 분해 선언이다.
+코틀린 표준 라이브러리에는 맵에 대한 확장 함수로 iterator가 들어있다. 그 iterator는 맵 원소에 대한 이터레이터를 반환한다.
+또한 코틀린 라이브러리 Map.Entry에 대한 확장 함수로 component1과 component2를 제공한다.
+
 ```kotlin
     fun printEntries(map: Map<String, String>) {
         for((key, value) in map) { // 루프 변수에 구조 분해 선언을 사용한다.
@@ -229,6 +267,7 @@ fun main() {
     val map = mapOf("Oracle" to "Java", "JetBrains" to "Kotlin")
     printEntries(map)
 ```
+
 코틀린 표준 라이브러이에서는 맨 앞의 다섯 원소에 대한 componentN을 제공한다.
 ```kotlin
     val map = mapOf("Oracle" to "Java", "JetBrains" to "Kotlin")
@@ -237,14 +276,12 @@ fun main() {
     }
 ```
 
-이 간단한 예제는 두 가지 코틀린 관례를 활용한다. 하나는 객체를 이터레이션하는 관례고, 다른 하나는 구조 분해 선언이다.
-코틀린 표준 라이브러리에는 맵에 대한 확장 함수로 iterator가 들어있다. 그 iterator는 맵 원소에 대한 이터레이터를 반환한다.
-또한 코틀린 라이브러리 Map.Entry에 대한 확장 함수로 component1과 component2를 제공한다.
-
 
 ## 프로퍼티 접근자 로직 재활용: 위임 프로퍼티
 위임 프로퍼티는 사용하면 값을 뒷받침하는 필드에 단순히 저장하는 겂보다 더 복잡한 방식으로 작동하는 프로퍼티를 쉽게 구현 할 수 있다. 또한 그 과정에서 접근자 로직을 매번 재구현할 필요도 없다. 예를 들어 프로퍼티는 위임을 사용해 자신의 값을 필드가 아니라 데이터베이스 테이블이나 브라우저 세션, 맵 등에 저장할 수 있다.
 위임은 객체가 직접 작업을 수행하지 않고 다른 도우미 객체가 그 작업을 처리하게 맡기는 디자인 패턴을 말한다. 이때 작업을 처리하는 도우미 객체를 위임 객체(delegate)라고 부른다.
+
+### 위임 프로퍼티 소개
 
 위임 프로퍼티의 일반적인 문법은 다음과 같다.
 
@@ -254,7 +291,7 @@ class Foo {
 }
 ```
 
-위임 프로퍼티 사용: by lazy()를 사용한 프로퍼티 초기화 지연
+### 위임 프로퍼티 사용: by lazy()를 사용한 프로퍼티 초기화 지연
 
 ```kotlin
 class Person(val name: String) {
