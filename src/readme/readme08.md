@@ -39,7 +39,7 @@ val action: () -> Unit = { println(42) }
 **(파라미터타입) -> 반환타입**
 **(int, String) -> Unit**
 
-``kotlin
+```kotlin
 val canReturnNull: (Int, Int) -> Int? =  { _, _ -> null }
 
 var funOrNull: ((Int, Int) -> Int)? = null

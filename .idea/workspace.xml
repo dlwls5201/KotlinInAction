@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="689da57b-aaca-4aac-9253-168af378a90c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/META-INF/kotlininaction.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlininaction/META-INF/kotlininaction.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Example7_2Kt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Example7_2Kt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/MyPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/MyPoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8Kt$action1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8Kt$action2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8Kt$canReturnNull$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8Kt$main$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8Kt$main$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8Kt$main$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8Kt$sum1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8Kt$sum2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme07.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme07.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme08.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme08.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter8/Example8.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter8/Example8_1.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/readme/readme07.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/readme/readme07.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/readme/readme08.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/readme/readme08.md" afterDir="false" />
-    </list>
+    <list default="true" id="689da57b-aaca-4aac-9253-168af378a90c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,20 +14,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/chapter8/Example8_1.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="135" column="75" selection-start-line="135" selection-start-column="75" selection-end-line="135" selection-end-column="75" />
+            <state relative-caret-position="32">
+              <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/chapter8/Example8_2.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/readme/readme08.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="209" column="3" selection-start-line="209" selection-start-column="3" selection-end-line="209" selection-end-column="3" />
+            <state relative-caret-position="186">
+              <caret line="213" column="24" lean-forward="true" selection-start-line="213" selection-start-column="24" selection-end-line="213" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -103,7 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/chapter4/Example.kt" />
         <option value="$PROJECT_DIR$/src/chapter4/Example4_1_2.kt" />
         <option value="$PROJECT_DIR$/src/chapter4/Example4_1_1.kt" />
         <option value="$PROJECT_DIR$/src/chapter4/Example4.2.kt" />
@@ -154,6 +143,7 @@
         <option value="$PROJECT_DIR$/src/chapter8/Example8_1_5.kt" />
         <option value="$PROJECT_DIR$/src/readme/readme08.md" />
         <option value="$PROJECT_DIR$/src/chapter8/Example8_1.kt" />
+        <option value="$PROJECT_DIR$/src/chapter8/Example8_2.kt" />
       </list>
     </option>
   </component>
@@ -364,13 +354,13 @@
       <window_info id="Image Layers" order="4" />
       <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.15665236" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.28674698" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.28674698" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.32891566" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.329927" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.28674698" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.28674698" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -457,7 +447,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chapter7/ExampleDelegate.kt" />
     <entry file="file://$PROJECT_DIR$/src/chapter8/Example8_1.kt" />
-    <entry file="file://$PROJECT_DIR$/src/chapter8/Example8_2.kt" />
     <entry file="file://$PROJECT_DIR$/src/chapter9/Example1.kt" />
     <entry file="file://$PROJECT_DIR$/src/readme/readme09.md" />
     <entry file="file://$PROJECT_DIR$/src/readme/readme10.md" />
@@ -681,17 +670,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/readme/readme08.md">
+    <entry file="file://$PROJECT_DIR$/src/chapter8/Example8_1.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="209" column="3" selection-start-line="209" selection-start-column="3" selection-end-line="209" selection-end-column="3" />
+        <state relative-caret-position="32">
+          <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chapter8/Example8_1.kt">
+    <entry file="file://$PROJECT_DIR$/src/chapter8/Example8_2.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="135" column="75" selection-start-line="135" selection-start-column="75" selection-end-line="135" selection-end-column="75" />
+        <state relative-caret-position="45">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/readme/readme08.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="213" column="24" lean-forward="true" selection-start-line="213" selection-start-column="24" selection-end-line="213" selection-end-column="24" />
         </state>
       </provider>
     </entry>
