@@ -32,12 +32,6 @@ fun findTheOldest(people: List<Person>) {
 }
 ```
 
-**람다식문법**
-
-파라미터 -> 본문<br>
-{ x: Int, y: Int -> x + y }<br>
-항상 중괄호 사이에 위치한다.
-
 ```kotlin
 //람다를 사용해 컬렉션 검색하기
 people.maxBy { p:Person -> p.age }
@@ -124,13 +118,13 @@ val getAge = Person::age
 
 ::를 사용하는 식을 멤버 참조라고 부른다. 멤버 참조는 프로퍼티나 메소드를 단 하나만 호출하는 함수 값을 만들어준다. ::는 클래스 이름과 여러분이 참조하려는 멤버(프로퍼티나 메소드) 이름 사이에 위치한다.
 
-**Person::age***
+**Person::age**
 **클래스::맴버**
 
 맴버 참조는 그 멤버를 호출하는 람다와 같은 타입이다. 따라서 다음 예처럼 그 둘을 자유롭게 바꿔 쓸 수 있다.
 
 ```kotlin
-people.maxBy(Person::age)
+people.maxBy (Person::age)
 people.maxBy { p -> p.age }
 people.maxBy { it.age }
 ```
@@ -208,8 +202,8 @@ val canBeInClub27 = { p: Person -> p.age <= 27}
 val people = listOf(Person("Alice",26), Person("Bob",31), Person("Carol",31))
 println(people,groupBy { it.age })
 ```
-위 예제에서 groupBy의 결과 타입은 Map<Int, List<Person>> 으로 나옵니다.
--> {26=[Person(name=Alice, age=26)], 31=[Person(name=Bob, age=31), Person(name=Carol, age=31)]}
+위 예제에서 groupBy의 결과 타입은 Map<Int, List<Person>> 으로 나옵니다.<br>
+{26=[Person(name=Alice, age=26)], 31=[Person(name=Bob, age=31), Person(name=Carol, age=31)]}
 
 ### flatMap과 flatten: 중첩된 컬렉션 안의 원소 처리
 
@@ -251,10 +245,11 @@ map이나 filter 같은 몇 가지 컬렉션 함수는 결과를 즉시 생성�
 ```kotlin
 people.map(Person:name).filter { it.startsWith("A") }
 ```
-코틀린 표준 라이브러리 참조 문서에는 filter와 map이 리스트를 반환하다고 써있다. 이는 이 연쇄 호출이 리스트를 2개 만든다는 뜻이다. 한 리스트는 filter의 결과를 담고, 다른 하자는 map의 결과를 담는다.
+코틀린 표준 라이브러리 참조 문서에는 filter와 map이 리스트를 반환하다고 써있다. 이는 이 연쇄 호출이 리스트를 2개 만든다는 뜻이다. 한 리스트는 filter의 결과를 담고, 다른 하나는 map의 결과를 담는다.
 이를 더 효율적으로 만들기 위해서는 각 연산이 컬렉션을 직접 사용하는 대신 시퀀스를 사용하게 만들어야 한다.
 
 ```kotlin
+people.asSequence()     // 원본 컬렉션을 시퀀스로 변환한다.
 people.asSequence()     // 원본 컬렉션을 시퀀스로 변환한다.
     .map(Person:name)   // 시퀀스도 컬렉션과 똑같은 API를 제공한다.
     .filter { it.startsWith("A") }
@@ -265,7 +260,7 @@ people.asSequence()     // 원본 컬렉션을 시퀀스로 변환한다.
 asSequence 확장 함수를 호출하면 어떤 컬렉션이든 시퀀스로 바꿀 수 있다. 시퀀스를 리스트로 만들 때는 toList를 사용한다.
 
 **시퀀스를 다시 컬렉션으로 왜 되돌려야 할까?**
-시퀀스의 원소를 차례로 이터레이션해야 한다면 시퀀스를 직접 써도 된다. 하지만 시퀀스 원소를 인덱스를 사용해 접근하는 등의 가른 API 메소드가 필요하다면 시퀀스를 리스트로 변환해야 한다.
+시퀀스의 원소를 차례로 이터레이션해야 한다면 시퀀스를 직접 써도 된다. 하지만 시퀀스 원소를 인덱스를 사용해 접근하는 등의 다른 API 메소드가 필요하다면 시퀀스를 리스트로 변환해야 한다.
 
 ### 시퀀스 연산 실행: 중간 연산과 최종 연산
 
@@ -279,7 +274,8 @@ listOf(1,2,3,4).asSequence()
 toList() 즉 최종 연산을 수행하지 않으면 중간 연산은 실행되지 않는다.
 
 ```kotlin
-   //map을 먼저 하면 모든 원소를 변환한다. 하지만 filter를 먼저 하면 부적절한 원소를 먼저 제외하기 때문에 그런 원소는 변환되지 않는다.
+   //map을 먼저 하면 모든 원소를 변환한다.
+   //하지만 filter를 먼저 하면 부적절한 원소를 먼저 제외하기 때문에 그런 원소는 변환되지 않는다.
     println(people.asSequence().map(Person::name)
         .filter { it.length < 4 }.toList())
 
@@ -287,6 +283,40 @@ toList() 즉 최종 연산을 수행하지 않으면 중간 연산은 실행되�
         .map(Person::name).toList())
 ```
 성능을 생각하면 위 예제는 filter 를 먼저 생성하는게 좋다.
+
+### 자바 스트림과 코틀린 시퀀스 비교
+
+자바 8 스트림을 아는 독자라면 시퀀스라는 개념이 스트림과 같다는 사실을 알았을 것이다. 코틀린에서 같은 개념을 따로 구현해 제공하는 이유는 안드로이드 등에서 예전 버전 자바를
+사용하는 경우 자바 8에 있는 스트림이 없기 때문이다.
+
+### 자바 항수형 인터페이스 활용
+
+```java
+    button.setOnClickListener(new OnClickListener() {
+        @override
+        public void onClick(view v) {
+            //...
+        }
+    })
+```
+
+코틀린에서는 무명 클래스 인스턴스 대신 람다를 넘길 수 있다.
+
+```kotlin
+    button.setOnClickListener { view -> ...}
+```
+
+onClickListener 를 구현하기 위해 사용한 람다에는 view라는 파라미터가 있다. view의 타입은 View다. 이는 onClick 메소드의 인자 타입과 같다.
+이런 코드가 작동하는 이유는 onClickListener에 추상 메소드가 단 하나만 있기 떄문이다. 그런 인터페이스를 함수형 인터페이스 또는 SAM 인터페이스라고 한다.
+SAM은 단일 추상 메소드(Single Absteact Method)라는 뜻이다. 자바 API에는 Runnable이나 Callable과 같은 함수형 인터페이스와 그런 함수형 인터페이스를 활용하는 메소드가 많다.
+코틀린은 함수형 인터페이스를 인자로 취하는 자바 메소드를 호출할 때 람다를 넘길 수 있게 해준다.
+따라서 코틀린 코드는 무명 클래스 인스턴스를 정의하고 활용할 필요가 없어서 여전히 깔끔하며 코틀린다운 코드로 남아있을 수 있다.
+
+
+
+
+
+
 
 ## 요약
 
