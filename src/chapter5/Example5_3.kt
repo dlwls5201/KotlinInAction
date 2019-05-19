@@ -37,25 +37,4 @@ fun main() {
 
     //println(people.asSequence().filter { it.name.length < 4}.map(Person::name).toList())
 
-
-    /**
-     * with, apply
-     */
-    //println(alphabet1())
-    //println(alphabet2())
 }
-
-fun alphabet1() = with(StringBuilder()) {
-    for(letter in 'A'..'Z') {
-        append(letter)
-    }
-    append("\nNow I know the alphabet!")
-    toString()
-}
-
-fun alphabet2() = StringBuilder().apply {
-    for(letter in 'A'..'Z') {
-        append(letter)
-    }
-    append("\nNow I know the alphabet!!")
-}.toString()

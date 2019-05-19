@@ -284,6 +284,85 @@ toList() 즉 최종 연산을 수행하지 않으면 중간 연산은 실행되�
 ```
 성능을 생각하면 위 예제는 filter 를 먼저 생성하는게 좋다.
 
+### 자바 스트림과 코틀린 시퀀스 비교
+
+자바 8 스트림을 아는 독자라면 시퀀스라는 개념이 스트림과 같다는 사실을 알았을 것이다. 코틀린에서 같은 개념을 따로 구현해 제공하는 이유는 안드로이드 등에서 예전 버전 자바를
+사용하는 경우 자바 8에 있는 스트림이 없기 때문이다.
+
+### 자바 항수형 인터페이스 활용
+
+```java
+    button.setOnClickListener(new OnClickListener() {
+        @override
+        public void onClick(view v) {
+            //...
+        }
+    })
+```
+
+코틀린에서는 무명 클래스 인스턴스 대신 람다를 넘길 수 있다.
+
+```kotlin
+    button.setOnClickListener { view -> ...}
+```
+
+onClickListener 를 구현하기 위해 사용한 람다에는 view라는 파라미터가 있다. view의 타입은 View다. 이는 onClick 메소드의 인자 타입과 같다.
+이런 코드가 작동하는 이유는 onClickListener에 추상 메소드가 단 하나만 있기 떄문이다. 그런 인터페이스를 함수형 인터페이스 또는 SAM 인터페이스라고 한다.
+SAM은 단일 추상 메소드(Single Absteact Method)라는 뜻이다. 자바 API에는 Runnable이나 Callable과 같은 함수형 인터페이스와 그런 함수형 인터페이스를 활용하는 메소드가 많다.
+코틀린은 함수형 인터페이스를 인자로 취하는 자바 메소드를 호출할 때 람다를 넘길 수 있게 해준다.
+따라서 코틀린 코드는 무명 클래스 인스턴스를 정의하고 활용할 필요가 없어서 여전히 깔끔하며 코틀린다운 코드로 남아있을 수 있다.
+
+### 자바 메소드에 람다를 인자로 전달
+
+함수형 인터페이스를 인자로 원하는 자마 베소드에 코틀린 람다를 전달할 수 있다.
+
+```java
+    void postponeComputation(int delay, Runnable computation)
+```
+
+코틀린에서 람다를 이 함수에 넘길 수 있다. 컴파일러는 자동으로 람다를 Runnable 인스턴스로 변환해준다.
+
+```kotlin
+    postponeComputation(1000) { println(42) }
+```
+
+여기서 'Runnable 인스턴스'라는 말은 실제로는 'Runnable을 구현한 무명 클래스의 인스턴스'라는 뜻이다. 컴파일러는 자동으로 그런 무명 클래스와 인스턴스를 만들어준다.
+이때 그 무명 클래스에 있는 유일한 추상 메소드를 구현할 때 람다 본문을 메소드 본문으로 사용한다. 여기서는 Runnable의 run이 그런 추상 메소드다.
+
+
+Runnable을 구현하는 무명 객체를 명시적으로 만들어거 사용할 수도 있다.
+
+```kotlin
+    postponeComputation(1000, object : Runnable { //객체 식을 함수형 인터페이스 구현으로 넘긴다.
+        override fun run() {
+            println(42)
+        }
+    }
+```
+
+하지만 람다와 무명 객체 사이에는 차이가 있다. 객체를 명시적으로 선언하는 경우 메소드를 호출할 때마다 새로운 객체가 생성된다. 람다는 달르다.
+정의가 들어있는 함수의 변수에 접근하지 않는 람다에 대응하는 무명 객체를 메소드를 호출할 때마다 반복 사용한다.
+
+```kotlin
+    // 전역 변수로 컴파일되므로 프로그램안에 단 하자의 인스턴스만 존재한다.
+    val runnable = Runnable { println(42) } // Runnable은 SAM 생성자
+    fun handleComputation() {
+        // 모든 handleComputation 호출에 같은 객체를 사용한다.
+        postponeComputation(1000, runnable)
+    }
+```
+
+람다가 주변 영역의 변수를 포획한다면 매 호출마다 같은 인스턴스를 사용할 수 없다. 그런 경우 컴파일러는 매번 주변 영역의 변수를 포획한 새로운 인스턴스를 생성해준다.
+예를 들어 다음 함수에서는 id를 필드로 저장하는 새로운 Runnable 인스턴스를 매번 새로 만들어 사용한다.
+
+```kotlin
+    fun handleComputation(id: String) { // 람다 안에서 "id" 변수를 포획한다.
+        postponeCOmputation(1000) {  println(id) } // handleComputation을 호출할 때마다 새로 Runnable 인스턴스를 만든다.
+    }
+```
+
+### 수신 객체 지정 람다: with와 apply
+
 ## 요약
 
 - 람다를 사용하면 코드 조각을 다른 함수에게 인자로 넘길 수 있다.
