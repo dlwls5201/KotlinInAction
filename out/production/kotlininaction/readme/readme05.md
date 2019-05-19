@@ -314,7 +314,7 @@ SAM은 단일 추상 메소드(Single Absteact Method)라는 뜻이다. 자바 A
 
 ### 자바 메소드에 람다를 인자로 전달
 
-함수형 인터페이스를 인자로 원하는 자마 베소드에 코틀린 람다를 전달할 수 있다.
+함수형 인터페이스를 인자로 원하는 자바 메소드에 코틀린 람다를 전달할 수 있다.
 
 ```java
     void postponeComputation(int delay, Runnable computation)
@@ -330,7 +330,7 @@ SAM은 단일 추상 메소드(Single Absteact Method)라는 뜻이다. 자바 A
 이때 그 무명 클래스에 있는 유일한 추상 메소드를 구현할 때 람다 본문을 메소드 본문으로 사용한다. 여기서는 Runnable의 run이 그런 추상 메소드다.
 
 
-Runnable을 구현하는 무명 객체를 명시적으로 만들어거 사용할 수도 있다.
+Runnable을 구현하는 무명 객체를 명시적으로 만들어 사용할 수도 있다.
 
 ```kotlin
     postponeComputation(1000, object : Runnable { //객체 식을 함수형 인터페이스 구현으로 넘긴다.
@@ -340,11 +340,10 @@ Runnable을 구현하는 무명 객체를 명시적으로 만들어거 사용할
     }
 ```
 
-하지만 람다와 무명 객체 사이에는 차이가 있다. 객체를 명시적으로 선언하는 경우 메소드를 호출할 때마다 새로운 객체가 생성된다. 람다는 달르다.
+하지만 람다와 무명 객체 사이에는 차이가 있다. 객체를 명시적으로 선언하는 경우 메소드를 호출할 때마다 새로운 객체가 생성된다. 람다는 다르다.
 정의가 들어있는 함수의 변수에 접근하지 않는 람다에 대응하는 무명 객체를 메소드를 호출할 때마다 반복 사용한다.
-
 ```kotlin
-    // 전역 변수로 컴파일되므로 프로그램안에 단 하자의 인스턴스만 존재한다.
+    // 전역 변수로 컴파일되므로 프로그램안에 단 하나의 인스턴스만 존재한다.
     val runnable = Runnable { println(42) } // Runnable은 SAM 생성자
     fun handleComputation() {
         // 모든 handleComputation 호출에 같은 객체를 사용한다.
@@ -357,7 +356,8 @@ Runnable을 구현하는 무명 객체를 명시적으로 만들어거 사용할
 
 ```kotlin
     fun handleComputation(id: String) { // 람다 안에서 "id" 변수를 포획한다.
-        postponeCOmputation(1000) {  println(id) } // handleComputation을 호출할 때마다 새로 Runnable 인스턴스를 만든다.
+        // handleComputation을 호출할 때마다 새로 Runnable 인스턴스를 만든다.
+        postponeCOmputation(1000) {  println(id) }
     }
 ```
 

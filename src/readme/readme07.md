@@ -6,7 +6,7 @@
 
 ## 산술 연산자 오버로딩
 
-**이항 상술 연산 오버로딩**
+### 이항 상술 연산 오버로딩
 
 ```kotlin
 data class Point(val x: Int, val y: Int) {
@@ -56,7 +56,7 @@ operator fun Point.times(scale: Double) : Point {
 `a + b` | plus |
 `a - b` | minus |
 
-**복합 대입 연산자 오버로딩**
+### 복합 대입 연산자 오버로딩
 
 ```kotlin
     var point = Point(1,2)
@@ -84,7 +84,7 @@ println(newList)
 [1,2,3]
 [1,2,3,4,5]
 
-**단항 연상자 오버로딩**
+### 단항 연상자 오버로딩
 
 단항 연산자를 오버로딩하는 절차도 이항 연산자와 마찬가지다. 미리 정해진 이름의 함수를(멤버 확장 함수로)선언하면서 operator로 표시하면 된다.
 
@@ -107,19 +107,49 @@ operator fun Point.unaryMinus(): Point {
 
 ## 비교 연산자 오버로딩
 
-**동등성 연산자: equals**
+### 동등성 연산자: equals
 
-코틀린이 == 연산자 호출을 equals 메소드 호출로 컴파일한다는 사일을 배웠다. ==와 !=는 내부에서 인자가 널인지 검사하므로 다른 연산과 달리 널이 될 수 있는 값에도 적용할 수 있다.
+코틀린이 == 연산자 호출을 equals 메소드 호출로 컴파일한다는 사실을 배웠다. ==와 !=는 내부에서 인자가 널인지 검사하므로 다른 연산과 달리 널이 될 수 있는 값에도 적용할 수 있다.
+
+```kotlin
+class Point(val x: Int, val y: Int) {
+    override fun equals(obj: Any?): Boolean {
+        if (obj === this) return true //파라미터가 this와 같은 객체인지
+        if(obj !is Point) return false // 파리미터 타입 검사
+        return obj.x == x && obj.y == y
+    }
+}
+
+//equals 를 구현 해줘야만 true 값이 나옵니다.
+Point(10,20) == Point(10, 20)
+
+```
+**정리**
+
+Java 에서는 equals 는 대상의 내용물 자체를 비교하지만 == 연산자는 비교하는 대상의 주소값을 비교 합니다.
+
+Kotlin 에서는 equals 는 == 와 매칭되며 객체의 주소값을 비교하기 위해서는 === 연산자를 사용해야 합니다.
+
 
 **순서 연산자: compareTo**
 
 Comparable에 들어있는 compareTo 메소드는 한 객체와 다른 객체의 크기를 비교해 정수로 나타내준다.
 
+```kotlin
+class Person(
+    val firstName: String, val lastName: String
+): Comparable<Person> {
+    override fun compareTo(other: Person): Int {
+        return compareValuesBy(this, other, Person::lastName, Person::firstName)
+    }
+}
+```
+
 ## 컬렉션과 범위에 대해 쓸 수 있는 관례
 
 인덱스를 사용해 원소를 설정하거나 가져오고 싶을 때는 a[b]라는 식을 사용한다.(이를 인덱스 연산자라고 부른다). in 연산자는 원소가 컬렉션이나 범위에 속하는지 검사하거나 컬렉션에 원소를 이터레이션할 때 사용한다.
 
-**인덱스로 원소에 접근: get과 set**
+### 인덱스로 원소에 접근: get과 set
 
 인덱스 연산자를 사용해 원소를 읽는 연산은 get 연산자와 메소드로 변환되고, 원소를 쓰는 연산은 set 연산자 메소드로 변환된다.
 Map과 MutableMap 인터페이스에는 그 두 메소드가 이미 들어있다. 이제 Point 클래스에 이런 메소드를 추가해보자.
@@ -138,16 +168,80 @@ operator fun Point.get(index: Int) : Int { // get 연산자 함수를 정의한�
 ```
 [20]
 
-**이 외에동 in, rangeTo, for 루프를 위한 iterator 관례가 책에 소개되어 있다.**
+### in 관례
 
-## 구조 분해 선언과 component gkatn
+- in은 객체가 컬렉션에 들어있는지 검사한다.
+- in 연산자와 대응하는 함수는 contains다
+- 어떤 점이 사각형 영역에 들어가는지 판단할 때 in 연산자를 사용하게 구현해보자
+
+```kotlin
+data class Rectangle(val upperLeft: Point, val lowerRight: Point)
+
+operator fun Rectangle.contains(p: Point): Boolean {
+    return p.x in upperLeft.x until lowerRight.x &&
+            p.y in upperLeft.y until lowerRight.y
+}
+
+fun main() {
+
+    val rect = Rectangle(Point(10,20), Point(50,50))
+    println(Point(20, 30) in rect)
+}
+```
+### rangeTo 관례
+
+### for 루프를 위한 iterator 관례
+
+## 구조 분해 선언과 component 함수
 
 구조 분해를 사용하면 복합적인 값을 분해해서 여러 다른 변수를 한꺼번에 초기화할 수 있다.
 
-## 프로퍼티 접근자 로직 재활용: 위임 프로퍼티
+구조 분해 선언을 사용해 여러 값 반환하기
+```kotlin
+    data class NameComponents(val name: String, val extension: String)
 
+    fun splitFilename(fullName: String): NameComponents {
+        val result = fullName.split('.',limit = 2)
+        return NameComponents(result[0], result[1])
+    }
+
+//main
+    val (name, ext) = splitFilename("example.kt")
+    println(name)
+    >> example
+    println(ext)
+    >> kt
+
+```
+
+구조 분해 선언과 루프
+```kotlin
+    fun printEntries(map: Map<String, String>) {
+        for((key, value) in map) { // 루프 변수에 구조 분해 선언을 사용한다.
+            println("$key -> $value")
+        }
+    }
+
+//main
+    val map = mapOf("Oracle" to "Java", "JetBrains" to "Kotlin")
+    printEntries(map)
+```
+코틀린 표준 라이브러이에서는 맨 앞의 다섯 원소에 대한 componentN을 제공한다.
+```kotlin
+    val map = mapOf("Oracle" to "Java", "JetBrains" to "Kotlin")
+    for (entry in map.entries) {
+        val key = entry.component1()
+    }
+```
+
+이 간단한 예제는 두 가지 코틀린 관례를 활용한다. 하나는 객체를 이터레이션하는 관례고, 다른 하나는 구조 분해 선언이다.
+코틀린 표준 라이브러리에는 맵에 대한 확장 함수로 iterator가 들어있다. 그 iterator는 맵 원소에 대한 이터레이터를 반환한다.
+또한 코틀린 라이브러리 Map.Entry에 대한 확장 함수로 component1과 component2를 제공한다.
+
+
+## 프로퍼티 접근자 로직 재활용: 위임 프로퍼티
 위임 프로퍼티는 사용하면 값을 뒷받침하는 필드에 단순히 저장하는 겂보다 더 복잡한 방식으로 작동하는 프로퍼티를 쉽게 구현 할 수 있다. 또한 그 과정에서 접근자 로직을 매번 재구현할 필요도 없다. 예를 들어 프로퍼티는 위임을 사용해 자신의 값을 필드가 아니라 데이터베이스 테이블이나 브라우저 세션, 맵 등에 저장할 수 있다.
-위임은 객체가 직접 작업을 수행하지 않고 다른 도우미 객체가 그 작업을 처리하게 맡기는 지다인 패턴을 말한다. 이때 작업을 처리하는 도우미 객체를 위임 객체(delegate)라고 부른다.
+위임은 객체가 직접 작업을 수행하지 않고 다른 도우미 객체가 그 작업을 처리하게 맡기는 디자인 패턴을 말한다. 이때 작업을 처리하는 도우미 객체를 위임 객체(delegate)라고 부른다.
 
 위임 프로퍼티의 일반적인 문법은 다음과 같다.
 

@@ -6,7 +6,7 @@
 
 ## 산술 연산자 오버로딩
 
-**이항 상술 연산 오버로딩**
+### 이항 상술 연산 오버로딩
 
 ```kotlin
 data class Point(val x: Int, val y: Int) {
@@ -56,10 +56,10 @@ operator fun Point.times(scale: Double) : Point {
 `a + b` | plus |
 `a - b` | minus |
 
-**복합 대입 연산자 오버로딩**
+### 복합 대입 연산자 오버로딩
 
 ```kotlin
- var point = Point(1,2)
+    var point = Point(1,2)
     point += Point(3,4)
     println(point)
 ```
@@ -84,7 +84,7 @@ println(newList)
 [1,2,3]
 [1,2,3,4,5]
 
-**단항 연상자 오버로딩**
+### 단항 연상자 오버로딩
 
 단항 연산자를 오버로딩하는 절차도 이항 연산자와 마찬가지다. 미리 정해진 이름의 함수를(멤버 확장 함수로)선언하면서 operator로 표시하면 된다.
 
@@ -98,7 +98,7 @@ operator fun Point.unaryMinus(): Point {
 [Point(x=10, y=-20)]
 
 식 | 함수 이름
----|:---:|---:
+---|:---:|
 `+a` | unaryPlus |
 `-a` | unaryMinus |
 `!a` | not |
@@ -107,9 +107,9 @@ operator fun Point.unaryMinus(): Point {
 
 ## 비교 연산자 오버로딩
 
-**동등성 연산자: equals**
+### 동등성 연산자: equals
 
-코틀린이 == 연산자 호출을 equals 메소드 호출로 컴파일한다는 사일을 배웠다. ==와 !=는 내부에서 인자가 널인지 검사하므로 다른 연산과 달리 널이 될 수 있는 값에도 적용할 수 있다.
+코틀린이 == 연산자 호출을 equals 메소드 호출로 컴파일한다는 사실을 배웠다. ==와 !=는 내부에서 인자가 널인지 검사하므로 다른 연산과 달리 널이 될 수 있는 값에도 적용할 수 있다.
 
 **순서 연산자: compareTo**
 
@@ -140,14 +140,56 @@ operator fun Point.get(index: Int) : Int { // get 연산자 함수를 정의한�
 
 **이 외에동 in, rangeTo, for 루프를 위한 iterator 관례가 책에 소개되어 있다.**
 
-## 구조 분해 선언과 component gkatn
+## 구조 분해 선언과 component 함수
 
 구조 분해를 사용하면 복합적인 값을 분해해서 여러 다른 변수를 한꺼번에 초기화할 수 있다.
 
-## 프로퍼티 접근자 로직 재활용: 위임 프로퍼티
+구조 분해 선언을 사용해 여러 값 반환하기
+```kotlin
+    data class NameComponents(val name: String, val extension: String)
 
+    fun splitFilename(fullName: String): NameComponents {
+        val result = fullName.split('.',limit = 2)
+        return NameComponents(result[0], result[1])
+    }
+
+//main
+    val (name, ext) = splitFilename("example.kt")
+    println(name)
+    >> example
+    println(ext)
+    >> kt
+
+```
+
+구조 분해 선언과 루프
+```kotlin
+    fun printEntries(map: Map<String, String>) {
+        for((key, value) in map) { // 루프 변수에 구조 분해 선언을 사용한다.
+            println("$key -> $value")
+        }
+    }
+
+//main
+    val map = mapOf("Oracle" to "Java", "JetBrains" to "Kotlin")
+    printEntries(map)
+```
+코틀린 표준 라이브러이에서는 맨 앞의 다섯 원소에 대한 componentN을 제공한다.
+```kotlin
+    val map = mapOf("Oracle" to "Java", "JetBrains" to "Kotlin")
+    for (entry in map.entries) {
+        val key = entry.component1()
+    }
+```
+
+이 간단한 예제는 두 가지 코틀린 관례를 활용한다. 하나는 객체를 이터레이션하는 관례고, 다른 하나는 구조 분해 선언이다.
+코틀린 표준 라이브러리에는 맵에 대한 확장 함수로 iterator가 들어있다. 그 iterator는 맵 원소에 대한 이터레이터를 반환한다.
+또한 코틀린 라이브러리 Map.Entry에 대한 확장 함수로 component1과 component2를 제공한다.
+
+
+## 프로퍼티 접근자 로직 재활용: 위임 프로퍼티
 위임 프로퍼티는 사용하면 값을 뒷받침하는 필드에 단순히 저장하는 겂보다 더 복잡한 방식으로 작동하는 프로퍼티를 쉽게 구현 할 수 있다. 또한 그 과정에서 접근자 로직을 매번 재구현할 필요도 없다. 예를 들어 프로퍼티는 위임을 사용해 자신의 값을 필드가 아니라 데이터베이스 테이블이나 브라우저 세션, 맵 등에 저장할 수 있다.
-위임은 객체가 직접 작업을 수행하지 않고 다른 도우미 객체가 그 작업을 처리하게 맡기는 지다인 패턴을 말한다. 이때 작업을 처리하는 도우미 객체를 위임 객체(delegate)라고 부른다.
+위임은 객체가 직접 작업을 수행하지 않고 다른 도우미 객체가 그 작업을 처리하게 맡기는 디자인 패턴을 말한다. 이때 작업을 처리하는 도우미 객체를 위임 객체(delegate)라고 부른다.
 
 위임 프로퍼티의 일반적인 문법은 다음과 같다.
 

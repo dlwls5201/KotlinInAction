@@ -66,7 +66,7 @@ fun main() {
 
 코틀린은 원시 타입과 래퍼 타입을 구분하지 않으므로 항상 같은 타입을 사용한다.
 
-원시 타입과 참조 타입이 같아면 코톨른이 그들을 항상 객체로 표현하는 걸까? 하지만 코틀린을 그러지 않는다. 대부분의 경우 코틀린의 Int 타입은 자바 int 타입으로 컴파일 된다.
+원시 타입과 참조 타입이 같으면 코틀이 그들을 항상 객체로 표현하는 걸까? 하지만 코틀린을 그러지 않는다. 대부분의 경우 코틀린의 Int 타입은 자바 int 타입으로 컴파일 된다.
 
 **숫자 변환**
 
@@ -116,6 +116,45 @@ val과 var의 구별과 마찬가지로 컬렉션의 읽기 전용 인터페이�
 - arrayOf 함수에 원소를 넘기면 배열을 만들 수 있다.
 - arrayOfNulls 함수에 정수 값을 인자로 넘기면 모든 원소가 null이고 인자로 넘긴 값과 크기가 같은 배열을 만들 수 있다. 물론 원소 타입이 널이 될 수 있는 타입인 경우에만 이 함수를 쓸 수 있다.
 - Array 생성자는 배열의 크기와 람다를 인자로 받아서 람다를 호출해서 각 배열 원소를 초기화해준다. arrayOf를 쓰지 않고 각 원소가 널이 아닌 배열을 만들어야 하는 경우 이 생성자를 사용한다.
+
+## 커니의 코틀린 - 배열 생성 법
+
+배열
+
+함수의 인자로 받은 값으로 구성된 배열을 반환합니다.
+```kotlin
+    fun <T> arrayOf(varag elements: T): Array<T>
+
+    val list = arrayOf(1,2,3,4,5)
+```
+
+특정 타입을 갖는 빈 배열을 반환합니다.
+```kotlin
+    fun <T> emptyArray(): Array<T>
+
+    val list = emptyArray<String>()
+```
+
+배열 내 각 값들이 모두 널 값으로 초기화되어 있고, 인자로 받은 size 만큼의 크기를 갖는 배열을 반환합니다.
+```kotlin
+    fun <T> arrayOfNulls(size: Int): Array<T?>
+
+    val list = arrayOfNulls<String>(3)
+```
+
+자바 원시 타입을 포함하는 배열
+```kotlin
+    fun intArrayOf(varag elements: Int): IntArray
+
+    val list = intArrayOf(1,2,3,4,5)
+```
+
+Array 생성자는 배열의 크기와 람다를 인자로 받아서 람다를 호출해서 각 배열 원소를 초기화해준다.
+```kotlin
+    public inline constructor(size: Int, init: (Int) -> T)
+
+    val list = Array(5) { i -> i * i}
+```
 
 ## 요약
 
