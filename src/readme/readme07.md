@@ -131,7 +131,7 @@ Java 에서는 equals 는 대상의 내용물 자체를 비교하지만 == 연�
 Kotlin 에서는 equals 는 == 와 매칭되며 객체의 주소값을 비교하기 위해서는 === 연산자를 사용해야 합니다.
 
 
-**순서 연산자: compareTo**
+### 순서 연산자: compareTo
 
 Comparable에 들어있는 compareTo 메소드는 한 객체와 다른 객체의 크기를 비교해 정수로 나타내준다.
 
@@ -169,6 +169,9 @@ operator fun Point.get(index: Int) : Int { // get 연산자 함수를 정의한�
 [20]
 
 ### in 관례
+
+>(a in c) -> c.contains(a)<br>
+in 연산자는 contains 함수 호출로 변환된다.
 
 - in은 객체가 컬렉션에 들어있는지 검사한다.
 - in 연산자와 대응하는 함수는 contains다

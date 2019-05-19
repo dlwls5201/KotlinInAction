@@ -3,7 +3,6 @@ package chapter7
 /**
  *  컬렉션과 범위에 대해 쓸 수 있는 관레
  */
-
 //in 관례
 //in은 객체가 컬렉션에 들어있는지 검사한다.
 //in 연산자와 대응하는 함수는 contains다
@@ -15,6 +14,8 @@ operator fun Rectangle.contains(p: Point): Boolean {
             p.y in upperLeft.y until lowerRight.y
 }
 
+//rangeTo 관레
+//
 fun main() {
 
     val rect = Rectangle(Point(10,20), Point(50,50))
