@@ -366,7 +366,7 @@ fun <T> copyData(source: MutableList<T>,
 
 호출 시점에 타입이 정해지는 제네릭을 인자로 받는 경우. 정해지는 타입 및 그 하위 타입을 받도록 지정하거나(upper bound) 정해지는 타입 및 그 상위 타입을 받도록(lower bound) 지정할 수 있습니다.
 
-upper bound : 자바 -> ? super T / kotlin -> in T 대응
+upper bound : 자바 -> ? super T / kotlin -> in T 대응<br>
 lower bound : 자바 -> ? extends T / kotlin -> out T 대응
 
 

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="689da57b-aaca-4aac-9253-168af378a90c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/readme/readme09.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/readme/readme09.md" afterDir="false" />
-    </list>
+    <list default="true" id="689da57b-aaca-4aac-9253-168af378a90c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/readme/readme09.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="370" column="25" selection-start-line="370" selection-start-column="25" selection-end-line="370" selection-end-column="25" />
+            <state relative-caret-position="357">
+              <caret line="378" column="5" lean-forward="true" selection-start-line="378" selection-start-column="5" selection-end-line="378" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -57,7 +55,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>나옵니다</find>
       <find>하자는</find>
       <find>가른</find>
       <find>/map을 먼저 하면 모든</find>
@@ -87,6 +84,7 @@
       <find>타입이기 때문에</find>
       <find>공변적으로</find>
       <find>프로젝</find>
+      <find>싱행</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -330,9 +328,9 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.15808298" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.15808298" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.28674698" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.28674698" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.32891566" />
       <window_info anchor="bottom" id="Version Control" order="3" />
@@ -663,8 +661,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/readme/readme09.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="370" column="25" selection-start-line="370" selection-start-column="25" selection-end-line="370" selection-end-column="25" />
+        <state relative-caret-position="357">
+          <caret line="378" column="5" lean-forward="true" selection-start-line="378" selection-start-column="5" selection-end-line="378" selection-end-column="5" />
         </state>
       </provider>
     </entry>
