@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="689da57b-aaca-4aac-9253-168af378a90c" name="Default Changelist" comment="" />
+    <list default="true" id="689da57b-aaca-4aac-9253-168af378a90c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/chapter5/MyExample.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/META-INF/kotlininaction.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlininaction/META-INF/kotlininaction.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter9/Example09Kt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlininaction/chapter9/Example09Kt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter9/Processor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme09.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme09.md" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,11 +39,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/readme/readme09.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="381" lean-forward="true" selection-start-line="381" selection-end-line="381" />
+            <state relative-caret-position="461">
+              <caret line="380" selection-start-line="380" selection-end-line="380" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/chapter5/MyExample.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="530">
+              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
             </state>
           </provider>
         </entry>
@@ -93,7 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/chapter4/Example4_1_1.kt" />
         <option value="$PROJECT_DIR$/src/chapter4/Example4.2.kt" />
         <option value="$PROJECT_DIR$/src/chapter4/Example4_3_3.kt" />
         <option value="$PROJECT_DIR$/src/chapter4/Example4_4.kt" />
@@ -144,6 +159,7 @@
         <option value="$PROJECT_DIR$/src/readme/readme08.md" />
         <option value="$PROJECT_DIR$/src/chapter9/Example09.kt" />
         <option value="$PROJECT_DIR$/src/readme/readme09.md" />
+        <option value="$PROJECT_DIR$/src/chapter5/MyExample.kt" />
       </list>
     </option>
   </component>
@@ -178,13 +194,7 @@
               <item name="KotlinInAction" type="b2602c69:ProjectViewProjectNode" />
               <item name="KotlinInAction" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter9" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KotlinInAction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KotlinInAction" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="readme" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter5" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -221,7 +231,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.chapter9.Example09Kt">
+  <component name="RunManager" selected="Kotlin.chapter5.MyExampleKt">
+    <configuration name="chapter5.MyExampleKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="kotlininaction" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="chapter5.MyExampleKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="chapter7.Example7_1Kt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="kotlininaction" />
       <option name="VM_PARAMETERS" />
@@ -243,19 +266,6 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" value="chapter7.Example7_2Kt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="chapter7.Example7_4Kt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="kotlininaction" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="chapter7.Example7_4Kt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -289,11 +299,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.chapter5.MyExampleKt" />
         <item itemvalue="Kotlin.chapter9.Example09Kt" />
         <item itemvalue="Kotlin.chapter8.Example8_1Kt" />
         <item itemvalue="Kotlin.chapter7.Example7_2Kt" />
         <item itemvalue="Kotlin.chapter7.Example7_1Kt" />
-        <item itemvalue="Kotlin.chapter7.Example7_4Kt" />
       </list>
     </recent_temporary>
   </component>
@@ -330,13 +340,13 @@
       <window_info id="Image Layers" order="4" />
       <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.15808298" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.28674698" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.28674698" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.32891566" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.329927" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.28674698" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.28674698" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -661,8 +671,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/readme/readme09.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="381" lean-forward="true" selection-start-line="381" selection-end-line="381" />
+        <state relative-caret-position="461">
+          <caret line="380" selection-start-line="380" selection-end-line="380" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter5/MyExample.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
         </state>
       </provider>
     </entry>
