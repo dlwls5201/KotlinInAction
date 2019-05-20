@@ -28,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/readme/readme09.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="362" column="44" selection-start-line="362" selection-start-column="44" selection-end-line="362" selection-end-column="44" />
+            <state relative-caret-position="239">
+              <caret line="81" selection-start-line="81" selection-end-line="81" />
             </state>
           </provider>
         </entry>
@@ -48,8 +48,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>공반</find>
-      <find>구현을 가른</find>
       <find>로 독립적으</find>
       <find>저장한다.</find>
       <find>람다를 사용해 컬렉션 검색하기</find>
@@ -78,6 +76,8 @@
       <find>(T)</find>
       <find>List나 List</find>
       <find>&lt;</find>
+      <find>&amp;lt;</find>
+      <find>을 제외한 아무런 제약</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -654,8 +654,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/readme/readme09.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="362" column="44" selection-start-line="362" selection-start-column="44" selection-end-line="362" selection-end-column="44" />
+        <state relative-caret-position="239">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
         </state>
       </provider>
     </entry>
