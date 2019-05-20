@@ -364,6 +364,8 @@ fun <T> copyData(source: MutableList<T>,
 >코틀린의 사용 지점 변성 선언은 자바의 한정 와일드카드와 똑같다. 코틀린 MutableList&lt;out T&gt;는 자바 MutableList&lt;? extends T&gt;와 같고
 코틀린 MutableList&lt;in T&gt;는 자바 MutableList&lt;? super T&gt;와 같다.
 
+사용 지점 변성을 사용하면 타입 인자로 사용할 수 있는 타입의 범위가 넓어진다.
+
 **와일드카드**
 
 ?는 알 수 없는 타입을 뜻한다.
@@ -374,15 +376,8 @@ fun <T> copyData(source: MutableList<T>,
 
 &lt;? extends 객체자료형&gt; - 명시된 객체 자료형과 이를 상속한 하위객체, 내부적으로는 명시된 객체 자료형으로 인식한다.
 
-호출 시점에 타입이 정해지는 제네릭을 인자로 받는 경우. 정해지는 타입 및 그 하위 타입을 받도록 지정하거나(upper bound) 정해지는 타입 및 그 상위 타입을 받도록(lower bound) 지정할 수 있습니다.
-
-upper bound : 자바 -> ? super T / kotlin -> in T 대응<br>
-lower bound : 자바 -> ? extends T / kotlin -> out T 대응
-
-
-
-
-사용 지점 변성을 사용하면 타입 인자로 사용할 수 있는 타입의 범위가 넓어진다.
+자바 -> ? super T  는  kotlin -> in T 대응<br>
+자바 -> ? extends T  는  kotlin -> out T 대응
 
 ### 스타 프로젝션: 타입 인자 대신 사용
 
