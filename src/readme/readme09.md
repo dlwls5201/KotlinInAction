@@ -261,7 +261,7 @@ out 키워드는 T의 사용법을 제한하며 T로 인해 생기는 하위 타
 - 공변성 : 하위 타입 관계가 유지된다.
 - 사용 제한 : T를 아웃 위치에서만 사용할 수 있다.
 
-이제 List(T) 인터페이스를 보자. 코틀린 List는 읽기 전용이다. 따라서 그 안에는 T 타입의 원소를 반환하는 get 메소드는 있지만 리스트에 T 타입의 값을 추가하거나 리스트에 있는
+이제 List<T> 인터페이스를 보자. 코틀린 List는 읽기 전용이다. 따라서 그 안에는 T 타입의 원소를 반환하는 get 메소드는 있지만 리스트에 T 타입의 값을 추가하거나 리스트에 있는
 기존 값을 변경하는 메소드는 없다. 따라서 List는 T에 대해 공변적이다.
 ```kotlin
 interface List<out T> : Collection<T> {
@@ -270,7 +270,7 @@ interface List<out T> : Collection<T> {
 }
 ```
 
-MutableList(T)를 타입 파라미터 T에 대해 공변적인 클래스를 선언할 수는 없다.
+MutableList<T>를 타입 파라미터 T에 대해 공변적인 클래스를 선언할 수는 없다.
 ```kotlin
 interface MutableList<T>
     : List<T>, MutableCollection<T> {
