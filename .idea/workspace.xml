@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="689da57b-aaca-4aac-9253-168af378a90c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/chapter9/Example09.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/readme/readme09.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="689da57b-aaca-4aac-9253-168af378a90c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,11 +14,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/readme/readme09.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="371" column="5" selection-start-line="371" selection-start-column="5" selection-end-line="371" selection-end-column="5" />
+            <state relative-caret-position="447">
+              <caret line="380" column="81" selection-start-line="380" selection-start-column="81" selection-end-line="380" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -316,13 +321,13 @@
       <window_info id="Image Layers" order="4" />
       <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.15665236" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.28674698" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.28674698" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.32891566" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.329927" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.28674698" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.28674698" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -424,13 +429,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -660,8 +658,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/readme/readme09.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="371" column="5" selection-start-line="371" selection-start-column="5" selection-end-line="371" selection-end-column="5" />
+        <state relative-caret-position="447">
+          <caret line="380" column="81" selection-start-line="380" selection-start-column="81" selection-end-line="380" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
         </state>
       </provider>
     </entry>
