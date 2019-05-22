@@ -1,116 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="689da57b-aaca-4aac-9253-168af378a90c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/META-INF/kotlininaction.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter2/Color.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter2/Example2_3Kt$WhenMappings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter2/Example2_3Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter2/Example2_4_2Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter2/Example2_4_3Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter2/Example2_4_4Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter2/Expr.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter2/Num.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter2/Sum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter3/Button.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter3/Example3_1Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter3/Example3_2Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter3/Example3_3Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter3/Example3_6Kt$saveUser1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter3/Example3_6Kt$saveUser2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter3/Example3_6Kt$validateBeforeSave$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter3/Example3_6Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter3/User3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter3/View.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Base.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/BaseImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Button.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Button2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Clickable$DefaultImpls.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Clickable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/CountingSet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/DelegationKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Derived.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Example4_1Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Example4_3Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Example4_4Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Expr1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Expr2$Num.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Expr2$Sum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Expr2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Focusable$DefaultImpls.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Focusable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/MyButton1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/MyUser$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/MyUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Num.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Outer$inner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Outer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/PrivateUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/SubscribeUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Sum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/User1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/User2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/User3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/View.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/Example5_1Kt$main$sum$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/Example5_1Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/Example5_2Kt$main$Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/Example5_2Kt$main$canBeInClub27$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/Example5_2Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/Example5_3Kt$main$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/Example5_3Kt$main$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/Example5_3Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/MyExampleKt$main$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/MyExampleKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter6/Example6Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter6/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Example7_1Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Example7_2Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Example7_3Kt$iterator$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Example7_3Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Example7_4Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/MyPoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/NameComponents.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Person$compareTo$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Person$compareTo$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Rectangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/ContactListFilters$getPredicate$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/ContactListFilters$getPredicate$startsWithPrefix$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/ContactListFilters.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Delivery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8_1Kt$action1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8_1Kt$action2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8_1Kt$canReturnNull$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8_1Kt$getShippingCostCalculator$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8_1Kt$getShippingCostCalculator$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8_1Kt$main$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8_1Kt$sum1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8_1Kt$sum2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8_1Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8_2Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/OS.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/SiteVisit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter9/Animal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter9/Cat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter9/Example09Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter9/Herd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme01.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme02.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme03.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme04.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme05.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme06.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme07.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme08.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme09.md" beforeDir="false" />
-    </list>
+    <list default="true" id="689da57b-aaca-4aac-9253-168af378a90c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +18,7 @@
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+              <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -233,7 +124,6 @@
         <option value="$PROJECT_DIR$/src/chapter3/Example3_1.kt" />
         <option value="$PROJECT_DIR$/src/readme/readme03.md" />
         <option value="$PROJECT_DIR$/src/readme/readme10.md" />
-        <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/src/chapter7/ExampleDelegate.kt" />
         <option value="$PROJECT_DIR$/src/chapter8/Example1.kt" />
         <option value="$PROJECT_DIR$/src/chapter4/Example4_1.kt" />
@@ -262,6 +152,7 @@
         <option value="$PROJECT_DIR$/src/chapter5/MyExample.kt" />
         <option value="$PROJECT_DIR$/src/readme/readme05.md" />
         <option value="$PROJECT_DIR$/src/chapter9/Example09.kt" />
+        <option value="$PROJECT_DIR$/readme.md" />
       </list>
     </option>
   </component>
@@ -297,6 +188,12 @@
               <item name="KotlinInAction" type="b2602c69:ProjectViewProjectNode" />
               <item name="KotlinInAction" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KotlinInAction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KotlinInAction" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="readme" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -432,15 +329,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.1602289" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.1602289" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.28674698" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.28674698" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.32891566" />
       <window_info anchor="bottom" id="Version Control" order="3" />
@@ -781,7 +679,7 @@
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
         </state>
       </provider>
     </entry>
