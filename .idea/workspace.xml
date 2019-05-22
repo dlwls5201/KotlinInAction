@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="689da57b-aaca-4aac-9253-168af378a90c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/META-INF/kotlininaction.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter2/Color.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter2/Example2_3Kt$WhenMappings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter2/Example2_3Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter2/Example2_4_2Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter2/Example2_4_3Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter2/Example2_4_4Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter2/Expr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter2/Num.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter2/Sum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter3/Button.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter3/Example3_1Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter3/Example3_2Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter3/Example3_3Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter3/Example3_6Kt$saveUser1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter3/Example3_6Kt$saveUser2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter3/Example3_6Kt$validateBeforeSave$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter3/Example3_6Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter3/User3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter3/View.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Base.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/BaseImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Button.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Button2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Clickable$DefaultImpls.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Clickable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/CountingSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/DelegationKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Derived.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Example4_1Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Example4_3Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Example4_4Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Expr1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Expr2$Num.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Expr2$Sum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Expr2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Focusable$DefaultImpls.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Focusable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/MyButton1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/MyUser$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/MyUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Num.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Outer$inner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Outer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/PrivateUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/SubscribeUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/Sum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/User1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/User2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/User3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter4/View.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/Example5_1Kt$main$sum$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/Example5_1Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/Example5_2Kt$main$Book.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/Example5_2Kt$main$canBeInClub27$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/Example5_2Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/Example5_3Kt$main$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/Example5_3Kt$main$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/Example5_3Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/MyExampleKt$main$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/MyExampleKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter5/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter6/Example6Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter6/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Example7_1Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Example7_2Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Example7_3Kt$iterator$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Example7_3Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Example7_4Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/MyPoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/NameComponents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Person$compareTo$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Person$compareTo$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Point.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter7/Rectangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/ContactListFilters$getPredicate$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/ContactListFilters$getPredicate$startsWithPrefix$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/ContactListFilters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Delivery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8_1Kt$action1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8_1Kt$action2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8_1Kt$canReturnNull$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8_1Kt$getShippingCostCalculator$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8_1Kt$getShippingCostCalculator$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8_1Kt$main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8_1Kt$sum1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8_1Kt$sum2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8_1Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Example8_2Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/OS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter8/SiteVisit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter9/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter9/Cat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter9/Example09Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/chapter9/Herd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme01.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme02.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme03.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme04.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme05.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme06.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme07.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme08.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlininaction/readme/readme09.md" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/readme/readme09.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5700">
+              <caret line="380" selection-start-line="380" selection-end-line="380" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/chapter5/MyExample.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="71" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/readme/readme05.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
+        <option value="Kotlin File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>하자는</find>
+      <find>가른</find>
+      <find>/map을 먼저 하면 모든</find>
+      <find>자마 베소드</find>
+      <find>하자</find>
+      <find>같아면</find>
+      <find>MutableCollection</find>
+      <find>사일</find>
+      <find>구조</find>
+      <find>지다인</find>
+      <find>이항 상술 연산 오버로딩</find>
+      <find>contains</find>
+      <find>연산자: equal</find>
+      <find>틀린 관례</find>
+      <find>여러 값 반환하기</find>
+      <find>nent 함</find>
+      <find>함수 타입 변수를</find>
+      <find>filter</find>
+      <find>는 A의 상위 타입 이다.</find>
+      <find>Producrer를 예로 공변</find>
+      <find>(T)</find>
+      <find>List나 List</find>
+      <find>&lt;</find>
+      <find>&amp;lt;</find>
+      <find>을 제외한 아무런 제약</find>
+      <find>변성개념은</find>
+      <find>타입이기 때문에</find>
+      <find>공변적으로</find>
+      <find>프로젝</find>
+      <find>싱행</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/chapter4/Example4.2.kt" />
+        <option value="$PROJECT_DIR$/src/chapter4/Example4_3_3.kt" />
+        <option value="$PROJECT_DIR$/src/chapter4/Example4_4.kt" />
+        <option value="$PROJECT_DIR$/src/readme/readne06.md.kt" />
+        <option value="$PROJECT_DIR$/src/chapter6/Example.kt" />
+        <option value="$PROJECT_DIR$/src/chapter7/Example01.kt" />
+        <option value="$PROJECT_DIR$/src/chapter7/Example1.kt" />
+        <option value="$PROJECT_DIR$/src/chapter8/Example2.kt" />
+        <option value="$PROJECT_DIR$/src/chapter10/Example1.kt" />
+        <option value="$PROJECT_DIR$/src/chapter2/Example.kt" />
+        <option value="$PROJECT_DIR$/src/chapter2/Example2_4_3.kt" />
+        <option value="$PROJECT_DIR$/src/chapter2/Example2_4_4.kt" />
+        <option value="$PROJECT_DIR$/src/chapter3/Example3.kt" />
+        <option value="$PROJECT_DIR$/src/chapter3/Example3_3.kt" />
+        <option value="$PROJECT_DIR$/src/chapter3/Example3_6.kt" />
+        <option value="$PROJECT_DIR$/src/chapter3/Example3_2.kt" />
+        <option value="$PROJECT_DIR$/src/readme/readme01.md" />
+        <option value="$PROJECT_DIR$/src/chapter2/Example2_3.kt" />
+        <option value="$PROJECT_DIR$/src/readme/readme02.md" />
+        <option value="$PROJECT_DIR$/src/chapter3/Example3_1.kt" />
+        <option value="$PROJECT_DIR$/src/readme/readme03.md" />
+        <option value="$PROJECT_DIR$/src/readme/readme10.md" />
+        <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/src/chapter7/ExampleDelegate.kt" />
+        <option value="$PROJECT_DIR$/src/chapter8/Example1.kt" />
+        <option value="$PROJECT_DIR$/src/chapter4/Example4_1.kt" />
+        <option value="$PROJECT_DIR$/src/chapter4/Example4_2.kt" />
+        <option value="$PROJECT_DIR$/src/chapter4/Example4_3.kt" />
+        <option value="$PROJECT_DIR$/src/readme/readme04.md" />
+        <option value="$PROJECT_DIR$/src/chapter4/Delegation.kt" />
+        <option value="$PROJECT_DIR$/src/chapter5/Example5_1.kt" />
+        <option value="$PROJECT_DIR$/src/chapter5/Example5_2.kt" />
+        <option value="$PROJECT_DIR$/src/chapter5/Example5_3.kt" />
+        <option value="$PROJECT_DIR$/src/chapter6/Example6.kt" />
+        <option value="$PROJECT_DIR$/src/readme/readme06.md" />
+        <option value="$PROJECT_DIR$/src/chapter7/Example7.kt" />
+        <option value="$PROJECT_DIR$/src/chapter7/Example7_4.kt" />
+        <option value="$PROJECT_DIR$/src/chapter7/Example7_1.kt" />
+        <option value="$PROJECT_DIR$/src/chapter7/Example7_2.kt" />
+        <option value="$PROJECT_DIR$/src/chapter7/Example7_3.kt" />
+        <option value="$PROJECT_DIR$/src/chapter7/Example7_5.kt" />
+        <option value="$PROJECT_DIR$/src/readme/readme07.md" />
+        <option value="$PROJECT_DIR$/src/chapter8/Example8.kt" />
+        <option value="$PROJECT_DIR$/src/chapter8/Example8_1_5.kt" />
+        <option value="$PROJECT_DIR$/src/chapter8/Example8_1.kt" />
+        <option value="$PROJECT_DIR$/src/chapter8/Example8_2.kt" />
+        <option value="$PROJECT_DIR$/src/readme/readme08.md" />
+        <option value="$PROJECT_DIR$/src/readme/readme09.md" />
+        <option value="$PROJECT_DIR$/src/chapter5/MyExample.kt" />
+        <option value="$PROJECT_DIR$/src/readme/readme05.md" />
+        <option value="$PROJECT_DIR$/src/chapter9/Example09.kt" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="180" />
+    <option name="y" value="112" />
+    <option name="width" value="1080" />
+    <option name="height" value="676" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="KotlinInAction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KotlinInAction" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KotlinInAction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KotlinInAction" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KotlinInAction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KotlinInAction" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/chapter7" />
+      <recent name="$PROJECT_DIR$/src/readme" />
+      <recent name="$PROJECT_DIR$/src/chapter3" />
+      <recent name="$PROJECT_DIR$/src/chapter10" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Kotlin.chapter5.MyExampleKt">
+    <configuration name="chapter5.MyExampleKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="kotlininaction" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="chapter5.MyExampleKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="chapter7.Example7_1Kt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="kotlininaction" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="chapter7.Example7_1Kt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="chapter7.Example7_2Kt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="kotlininaction" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="chapter7.Example7_2Kt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="chapter8.Example8_1Kt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="kotlininaction" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="chapter8.Example8_1Kt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="chapter9.Example09Kt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="kotlininaction" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="chapter9.Example09Kt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.chapter5.MyExampleKt" />
+        <item itemvalue="Kotlin.chapter9.Example09Kt" />
+        <item itemvalue="Kotlin.chapter8.Example8_1Kt" />
+        <item itemvalue="Kotlin.chapter7.Example7_2Kt" />
+        <item itemvalue="Kotlin.chapter7.Example7_1Kt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="689da57b-aaca-4aac-9253-168af378a90c" name="Default Changelist" comment="" />
+      <created>1554771567876</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554771567876</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <layout>
+      <window_info id="Designer" order="0" />
+      <window_info id="UI Designer" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.1602289" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.28674698" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="2" weight="0.32891566" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.329927" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.28674698" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="10" weight="0.329927" />
+      <window_info anchor="right" id="Theme Preview" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Palette&#9;" order="2" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
+    </layout>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/chapter10/Example1.kt" />
+    <entry file="file://$PROJECT_DIR$/src/readme/readme03.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="104" column="9" lean-forward="true" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter3/Example3_3.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="47" lean-forward="true" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter3/Example3_1.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="66" lean-forward="true" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/readme/readme01.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/common/generated/_Arrays.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="793">
+          <caret line="13780" column="1" selection-start-line="13773" selection-start-column="2" selection-end-line="13780" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter2/Example2_3.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1438">
+          <caret line="96" column="64" lean-forward="true" selection-start-line="96" selection-start-column="64" selection-end-line="96" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter7/ExampleDelegate.kt" />
+    <entry file="file://$PROJECT_DIR$/src/chapter9/Example1.kt" />
+    <entry file="file://$PROJECT_DIR$/src/readme/readme10.md" />
+    <entry file="file://$PROJECT_DIR$/src/chapter4/Example4_1.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter4/Example4_2.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+          <folding>
+            <element signature="e#18#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/readme/readme04.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5520">
+          <caret line="368" column="22" selection-start-line="368" selection-start-column="22" selection-end-line="368" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter4/Delegation.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/readme/readme02.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter4/Example4_4.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter4/Example4_3.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="93" column="35" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter5/Example5_1.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter5/Example5_2.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="85" column="68" selection-start-line="85" selection-start-column="68" selection-end-line="85" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter5/Example5_3.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/Library.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/Arrays.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="115" column="21" selection-start-line="115" selection-start-column="21" selection-end-line="115" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/Array.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter6/Example6.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/common/kotlin/collections/Collections.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="103" column="61" selection-start-line="103" selection-start-column="50" selection-end-line="103" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/Collections.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="358" column="15" selection-start-line="358" selection-start-column="15" selection-end-line="358" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter7/Example7_1.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/readme/readme06.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="144" column="17" lean-forward="true" selection-start-line="144" selection-start-column="17" selection-end-line="144" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/Range.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/Iterator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter7/Example7_2.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter7/Example7_3.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter7/Example7_4.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter7/Example7_5.kt" />
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/String.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter8/Example8_1_5.kt" />
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/common/kotlin/collections/Sets.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter8/Example8_2.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter8/Example8_1.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="120" column="15" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/readme/readme07.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3525">
+          <caret line="235" selection-start-line="235" selection-end-line="235" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/CharSequence.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/common/kotlin/text/Strings.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="742" column="24" selection-start-line="742" selection-start-column="24" selection-end-line="742" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/text/TypeAliases.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/common/generated/_Collections.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="1651" column="53" selection-start-line="1651" selection-start-column="53" selection-end-line="1651" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/readme/readme08.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3948">
+          <caret selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/readme/readme09.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5700">
+          <caret line="380" selection-start-line="380" selection-end-line="380" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter5/MyExample.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="71" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/readme/readme05.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter9/Example09.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>kotlininaction</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
