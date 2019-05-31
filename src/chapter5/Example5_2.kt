@@ -62,9 +62,9 @@ fun main() {
      * 컬렉션의 모든 원소를 어떤 특성에 따라 여러 그룹으로 나누고 싶을 때 사용
      */
     //groupBy 의 결과 타입은 Map<Int, List<Person>> 으로 나옵니다.
-    //println(people.groupBy { it.age } )
-    //println(people.groupBy { it.age }[26])
-    //println(people.groupBy { it.age }[31] )
+    println(people.groupBy { it.age } )
+    println(people.groupBy { it.age }[26])
+    println(people.groupBy { it.age }[31])
 
     val groupBySampleList = listOf("a","ab","b")
     //println(groupBySampleList.groupBy(String::first))
