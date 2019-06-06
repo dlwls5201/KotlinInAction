@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="689da57b-aaca-4aac-9253-168af378a90c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/readme/readme07.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/readme/readme07.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,11 +16,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/chapter2/Example2_3.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="262">
               <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/readme/readme05.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="343" column="10" lean-forward="true" selection-start-line="343" selection-start-column="10" selection-end-line="343" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/readme/readme07.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="311" lean-forward="true" selection-start-line="311" selection-end-line="311" />
             </state>
           </provider>
         </entry>
@@ -39,7 +57,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>같아면</find>
       <find>MutableCollection</find>
       <find>사일</find>
       <find>구조</find>
@@ -69,6 +86,7 @@
       <find>T는 순서대로 다음과 같은 역활을 한다.</find>
       <find>변셩</find>
       <find>enum</find>
+      <find>멤버 참조</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -116,7 +134,6 @@
         <option value="$PROJECT_DIR$/src/chapter7/Example7_2.kt" />
         <option value="$PROJECT_DIR$/src/chapter7/Example7_3.kt" />
         <option value="$PROJECT_DIR$/src/chapter7/Example7_5.kt" />
-        <option value="$PROJECT_DIR$/src/readme/readme07.md" />
         <option value="$PROJECT_DIR$/src/chapter8/Example8.kt" />
         <option value="$PROJECT_DIR$/src/chapter8/Example8_1_5.kt" />
         <option value="$PROJECT_DIR$/src/chapter8/Example8_1.kt" />
@@ -126,8 +143,9 @@
         <option value="$PROJECT_DIR$/src/chapter9/Example09.kt" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/src/chapter5/Example5_2.kt" />
-        <option value="$PROJECT_DIR$/src/readme/readme05.md" />
         <option value="$PROJECT_DIR$/src/readme/readme09.md" />
+        <option value="$PROJECT_DIR$/src/readme/readme05.md" />
+        <option value="$PROJECT_DIR$/src/readme/readme07.md" />
       </list>
     </option>
   </component>
@@ -302,6 +320,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
@@ -548,13 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/readme/readme07.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3525">
-          <caret line="235" selection-start-line="235" selection-end-line="235" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/CharSequence.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -628,13 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/readme/readme05.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="218" column="3" lean-forward="true" selection-start-line="218" selection-start-column="3" selection-end-line="218" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/readme/readme09.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -653,6 +658,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
           <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/readme/readme05.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="343" column="10" lean-forward="true" selection-start-line="343" selection-start-column="10" selection-end-line="343" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/readme/readme07.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="311" lean-forward="true" selection-start-line="311" selection-end-line="311" />
         </state>
       </provider>
     </entry>
