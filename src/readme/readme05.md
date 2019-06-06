@@ -201,6 +201,38 @@ people.maxBy { p -> p.age }
 people.maxBy { it.age }
 ```
 
+**추가예시**
+```kotlin
+        //하나의 메서드만 호출하는 람다 표현식은 메서드 참조를 사용해 표현
+        fun doOnSomething(view: View) {
+            //...
+        }
+
+        btnA.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(view: View) {
+                doOnSomething(view)
+            }
+        })
+
+        btnA.setOnClickListener({view -> doOnSomething(view)})
+
+        btnA.setOnClickListener(::doOnSomething)
+
+        //코틀린에서는 프로퍼티도 멤버 참조를 지원
+        class Person(val name: String, val age: Int) {
+
+            val adult: Boolean get() = age > 19
+        }
+
+        val people = listOf<Person>()
+
+        people.filter({ person -> person.adult })
+        people.filter({ it.adult })
+        people.filter(Person::adult)
+```
+
+
+
 ## 컬렉션 함수형 API
 
 ### 필수적인 함수: filter와 map
@@ -302,6 +334,86 @@ println(books.flatMap { it.authors }.toSet())
 ```
 [Jasper Fforde, Terry Prachett, Neil Gaiman]
 toSet은 flatMap의 결과 리스트에서 중복을 없애고 집합으로 만든다.
+
+**kunny 스트림 예시**
+
+```kotlin
+        val cities = listOf("Seoul","Tokyo","MountainView")
+        /**
+         * 변환
+         *
+         * map, groupBy
+         */
+        //cities.map { it.toUpperCase() }.forEach { print(it) }
+        //cities.mapNotNull { if(it.length > 5) null else it }.forEach { print(it) }
+        cities.groupBy { cities -> if(cities.length > 5) "A" else "B" }.forEach {
+            key, cities ->
+            //println("$key : $cities")
+        }
+
+        /**
+         * 필터
+         *
+         * filter, take, drop, first, last, distinct
+         */
+        //cities.filter { it.length <= 5 }.forEach { println(it) }
+
+        //cities.take(1).forEach { println(it) }
+        //cities.takeLast(1).forEach { println(it) }
+        //cities.takeWhile { it.length > 5 }.forEach { println(it) } //첫 인자에서부터 해당 조건을 만족 할 때 까지 배출
+
+        //cities.drop(1).forEach { println(it) }
+        //cities.dropWhile { it.length > 5 }.forEach { println(it) } //첫 인자에서부터 해당 조건을 만족 할 때 까지 제외
+
+        //println(cities.first())
+        //println(cities.first { it.length > 5 })
+
+        //println(cities.last())
+        //println(cities.last { it.length > 5 })
+
+        val citiesForDistinct = listOf("Seoul","Tokyo","Mountain View","Seoul","Tokyo")
+
+        //citiesForDistinct.distinct().forEach { println(it) }
+        //citiesForDistinct.distinctBy { it.length }.forEach { println(it) }
+
+        /**
+         * 조합 및 합계
+         *
+         * zip, joinToString(), count, reduce, fold
+         */
+        val cityCodes = listOf("SEO", "TOK", "MTV", "NYC")
+        val cityNames = listOf("Seoul","Tokyo","MountainView")
+
+        cityCodes.zip(cityNames)
+            .forEach {
+                //println(it.first + " : " + it.second)
+            }
+
+        //println(cities.joinToString(separator = "|"))
+
+        //println(cities.count())
+        //println(cities.count { it.length <= 5 })
+
+        //println(cities.reduce { acc, s -> acc + s })
+
+        //println(cities.fold("BlackJIn") { acc, s ->"$acc $s" })
+
+        /**
+         * 기타
+         *
+         * any, none, max, min, average
+         */
+        //println(cities.any { it.length <= 5 })
+
+        //println(cities.none { it.isEmpty() })
+
+        val numbers = listOf(4,6,8,21,9,10,2,0)
+        //println(numbers.max())
+        //println(numbers.min())
+
+        //println(numbers.average())
+```
+
 
 
 **정리**
