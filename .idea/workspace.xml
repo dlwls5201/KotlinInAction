@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="689da57b-aaca-4aac-9253-168af378a90c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/readme/readme07.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/readme/readme07.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/readme/readme08.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/readme/readme08.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,11 +34,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/readme/readme07.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="164">
               <caret line="311" lean-forward="true" selection-start-line="311" selection-end-line="311" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/readme/readme06.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="138" column="9" lean-forward="true" selection-start-line="138" selection-start-column="9" selection-end-line="138" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/readme/readme08.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="305" selection-start-line="305" selection-end-line="305" />
             </state>
           </provider>
         </entry>
@@ -57,8 +75,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>MutableCollection</find>
-      <find>사일</find>
       <find>구조</find>
       <find>지다인</find>
       <find>이항 상술 연산 오버로딩</find>
@@ -87,6 +103,8 @@
       <find>변셩</find>
       <find>enum</find>
       <find>멤버 참조</find>
+      <find>코드가 월씬 더</find>
+      <find>: 람다</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,7 +145,6 @@
         <option value="$PROJECT_DIR$/src/chapter5/Example5_1.kt" />
         <option value="$PROJECT_DIR$/src/chapter5/Example5_3.kt" />
         <option value="$PROJECT_DIR$/src/chapter6/Example6.kt" />
-        <option value="$PROJECT_DIR$/src/readme/readme06.md" />
         <option value="$PROJECT_DIR$/src/chapter7/Example7.kt" />
         <option value="$PROJECT_DIR$/src/chapter7/Example7_4.kt" />
         <option value="$PROJECT_DIR$/src/chapter7/Example7_1.kt" />
@@ -138,7 +155,6 @@
         <option value="$PROJECT_DIR$/src/chapter8/Example8_1_5.kt" />
         <option value="$PROJECT_DIR$/src/chapter8/Example8_1.kt" />
         <option value="$PROJECT_DIR$/src/chapter8/Example8_2.kt" />
-        <option value="$PROJECT_DIR$/src/readme/readme08.md" />
         <option value="$PROJECT_DIR$/src/chapter5/MyExample.kt" />
         <option value="$PROJECT_DIR$/src/chapter9/Example09.kt" />
         <option value="$PROJECT_DIR$/readme.md" />
@@ -146,6 +162,8 @@
         <option value="$PROJECT_DIR$/src/readme/readme09.md" />
         <option value="$PROJECT_DIR$/src/readme/readme05.md" />
         <option value="$PROJECT_DIR$/src/readme/readme07.md" />
+        <option value="$PROJECT_DIR$/src/readme/readme06.md" />
+        <option value="$PROJECT_DIR$/src/readme/readme08.md" />
       </list>
     </option>
   </component>
@@ -502,13 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/readme/readme06.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="144" column="17" lean-forward="true" selection-start-line="144" selection-start-column="17" selection-end-line="144" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/Range.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -585,13 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/readme/readme08.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3948">
-          <caret selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -672,6 +676,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
           <caret line="311" lean-forward="true" selection-start-line="311" selection-end-line="311" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/readme/readme06.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="138" column="9" lean-forward="true" selection-start-line="138" selection-start-column="9" selection-end-line="138" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/readme/readme08.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="305" selection-start-line="305" selection-end-line="305" />
         </state>
       </provider>
     </entry>
