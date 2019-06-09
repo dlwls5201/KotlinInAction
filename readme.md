@@ -13,4 +13,3 @@ Kotlin In Action 책을 보며 공부한 내용을 정리한 저장소 입니다
 - [Chapter07 연산자 오버로딩과 기타 관례](/src/readme/readme07.md)
 - [Chapter08 고차 함수 : 파라미터와 반환 값으로 람다 사용](/src/readme/readme08.md)
 - [Chapter09 제네릭스](/src/readme/readme09.md)
-- [Chapter10 애노테이션과 리플렉션](/src/readme/readme10.md)
