@@ -2,8 +2,6 @@
 
 Kotlin In Action 책을 보며 공부한 내용을 정리한 저장소 입니다.
 
-<img src="http://image.yes24.com/momo/TopCate1664/MidCate003/166322296.jpg" width="60%">
-
 - [Chapter01 코틀린이란 무엇이며, 왜 필요한가?](/src/readme/readme01.md)
 - [Chapter02 코틀린 기초](/src/readme/readme02.md)
 - [Chapter03 함수 정의와 호출](/src/readme/readme03.md)
@@ -13,3 +11,5 @@ Kotlin In Action 책을 보며 공부한 내용을 정리한 저장소 입니다
 - [Chapter07 연산자 오버로딩과 기타 관례](/src/readme/readme07.md)
 - [Chapter08 고차 함수 : 파라미터와 반환 값으로 람다 사용](/src/readme/readme08.md)
 - [Chapter09 제네릭스](/src/readme/readme09.md)
+
+<img src="http://image.yes24.com/momo/TopCate1664/MidCate003/166322296.jpg" width="60%">
