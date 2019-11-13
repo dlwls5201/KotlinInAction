@@ -23,5 +23,8 @@ class Person(
 
 fun main() {
 
-    //println(MyPoint(10,20) == MyPoint(10, 20))
+    val p1 = Person("Alice", "Smith")
+    val p2 = Person("Bob", "Johnson")
+
+    println(p1 < p2)
 }
