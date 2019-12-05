@@ -324,14 +324,14 @@ findPerson {
 
 // 무명함수와 고차함수 예제
 
-        val isPositive1 = fun(num: Int): Boolean {
-            return num > 0
-        }
+val isPositive1 = fun(num: Int): Boolean {
+    return num > 0
+}
 
-        val isPositive2: (Int) -> Boolean = {
-            it > 0
-        }
+val isPositive2: (Int) -> Boolean = {
+    it > 0
+}
 
-        println("isPositive1 = ${isPositive1(10)}")
-        println("isPositive2 = ${isPositive2(10)}")
+println("isPositive1 = $isPositive1(10)")
+println("isPositive2 = $isPositive2(10)") //or isPositive2.invoke(10)
 ```
