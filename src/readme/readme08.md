@@ -332,6 +332,6 @@ val isPositive2: (Int) -> Boolean = {
     it > 0
 }
 
-println("isPositive1 = $isPositive1(10)")
-println("isPositive2 = $isPositive2(10)") //or isPositive2.invoke(10)
+println("isPositive1 = ${isPositive1(10)}")
+println("isPositive2 = ${isPositive2(10)}") //or isPositive2.invoke(10)
 ```
