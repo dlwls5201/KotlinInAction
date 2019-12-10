@@ -142,6 +142,14 @@ val과 var의 구별과 마찬가지로 컬렉션의 읽기 전용 인터페이�
     val list = arrayOfNulls<String>(3)
 ```
 
+배열 내 각 값들을 특정 값으로 초기화 하는 size 만큼의 크기를 갖는 배열을 반환합니다.
+```kotlin
+    //Array constructor
+    public inline constructor(size: Int, init: (Int) -> T)
+
+    val array = Array<Int>(5) { -1 }
+```
+
 자바 원시 타입을 포함하는 배열
 ```kotlin
     fun intArrayOf(varag elements: Int): IntArray

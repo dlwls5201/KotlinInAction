@@ -190,7 +190,7 @@ val getAge = Person::age
 
 ::를 사용하는 식을 멤버 참조라고 부른다. 멤버 참조는 프로퍼티나 메소드를 단 하나만 호출하는 함수 값을 만들어준다. ::는 클래스 이름과 여러분이 참조하려는 멤버(프로퍼티나 메소드) 이름 사이에 위치한다.
 
-**Person::age**
+**Person::age**</br>
 **클래스::맴버**
 
 맴버 참조는 그 멤버를 호출하는 람다와 같은 타입이다. 따라서 다음 예처럼 그 둘을 자유롭게 바꿔 쓸 수 있다.
@@ -201,11 +201,43 @@ people.maxBy { p -> p.age }
 people.maxBy { it.age }
 ```
 
+**추가예시**
+```kotlin
+        //하나의 메서드만 호출하는 람다 표현식은 메서드 참조를 사용해 표현
+        fun doOnSomething(view: View) {
+            //...
+        }
+
+        btnA.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(view: View) {
+                doOnSomething(view)
+            }
+        })
+
+        btnA.setOnClickListener({view -> doOnSomething(view)})
+
+        btnA.setOnClickListener(::doOnSomething)
+
+        //코틀린에서는 프로퍼티도 멤버 참조를 지원
+        class Person(val name: String, val age: Int) {
+
+            val adult: Boolean get() = age > 19
+        }
+
+        val people = listOf<Person>()
+
+        people.filter({ person -> person.adult })
+        people.filter({ it.adult })
+        people.filter(Person::adult)
+```
+
+
+
 ## 컬렉션 함수형 API
 
 ### 필수적인 함수: filter와 map
 
-**filter**
+#### filter
 
 filter함수는 컬렉션을 이터레이션하면서 주어진 람다에 각 원소를 넘겨서 람다가 true를 반환하는 원소만 모은다.
 ```kotlin
@@ -220,7 +252,7 @@ println(people.filter { it.age > 30 })
 
 filter 함수는 컬렉션에서 원치 않는 원소를 제거한다. 하지만 filter는 원소를 반환할 수는 없다. 원소를 변환하려면 map 함수를 사용해야 한다.
 
-**map**
+#### map
 
 map 함수는 주어진 람다를 컬렉션의 각 원소에 적용한 결과를 모아서 새 컬렉션을 만들다.
 
@@ -302,6 +334,86 @@ println(books.flatMap { it.authors }.toSet())
 ```
 [Jasper Fforde, Terry Prachett, Neil Gaiman]
 toSet은 flatMap의 결과 리스트에서 중복을 없애고 집합으로 만든다.
+
+**kunny 스트림 예시**
+
+```kotlin
+        val cities = listOf("Seoul","Tokyo","MountainView")
+        /**
+         * 변환
+         *
+         * map, groupBy
+         */
+        //cities.map { it.toUpperCase() }.forEach { print(it) }
+        //cities.mapNotNull { if(it.length > 5) null else it }.forEach { print(it) }
+        cities.groupBy { cities -> if(cities.length > 5) "A" else "B" }.forEach {
+            key, cities ->
+            //println("$key : $cities")
+        }
+
+        /**
+         * 필터
+         *
+         * filter, take, drop, first, last, distinct
+         */
+        //cities.filter { it.length <= 5 }.forEach { println(it) }
+
+        //cities.take(1).forEach { println(it) }
+        //cities.takeLast(1).forEach { println(it) }
+        //cities.takeWhile { it.length > 5 }.forEach { println(it) } //첫 인자에서부터 해당 조건을 만족 할 때 까지 배출
+
+        //cities.drop(1).forEach { println(it) }
+        //cities.dropWhile { it.length > 5 }.forEach { println(it) } //첫 인자에서부터 해당 조건을 만족 할 때 까지 제외
+
+        //println(cities.first())
+        //println(cities.first { it.length > 5 })
+
+        //println(cities.last())
+        //println(cities.last { it.length > 5 })
+
+        val citiesForDistinct = listOf("Seoul","Tokyo","Mountain View","Seoul","Tokyo")
+
+        //citiesForDistinct.distinct().forEach { println(it) }
+        //citiesForDistinct.distinctBy { it.length }.forEach { println(it) }
+
+        /**
+         * 조합 및 합계
+         *
+         * zip, joinToString(), count, reduce, fold
+         */
+        val cityCodes = listOf("SEO", "TOK", "MTV", "NYC")
+        val cityNames = listOf("Seoul","Tokyo","MountainView")
+
+        cityCodes.zip(cityNames)
+            .forEach {
+                //println(it.first + " : " + it.second)
+            }
+
+        //println(cities.joinToString(separator = "|"))
+
+        //println(cities.count())
+        //println(cities.count { it.length <= 5 })
+
+        //println(cities.reduce { acc, s -> acc + s })
+
+        //println(cities.fold("BlackJIn") { acc, s ->"$acc $s" })
+
+        /**
+         * 기타
+         *
+         * any, none, max, min, average
+         */
+        //println(cities.any { it.length <= 5 })
+
+        //println(cities.none { it.isEmpty() })
+
+        val numbers = listOf(4,6,8,21,9,10,2,0)
+        //println(numbers.max())
+        //println(numbers.min())
+
+        //println(numbers.average())
+```
+
 
 
 **정리**
